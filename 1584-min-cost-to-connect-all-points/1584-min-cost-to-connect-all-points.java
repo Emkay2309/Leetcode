@@ -1,55 +1,71 @@
-public class Solution {
-    public int minKey(boolean[] inMST, int[] key) {
-        int minIndex = 0;
-        int minValue = Integer.MAX_VALUE;
-        for (int i = 0; i < key.length; i++) {
-            if (!inMST[i] && key[i] < minValue) {
-                minIndex = i;
-                minValue = key[i];
-            }
-        }
-        return minIndex;
+import java.util.*;
+
+class Pair {
+    int weight;
+    int vertex;
+
+    Pair(int weight, int vertex) {
+        this.weight = weight;
+        this.vertex = vertex;
     }
+}
 
-    public int MST(int[][] graph, int V) {
-        int[] key = new int[V];
-        Arrays.fill(key, Integer.MAX_VALUE);
+class Solution {
+    public int minMST(List<List<Pair>> adj, int V) {
+        PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.weight)); // min heap
+        pq.offer(new Pair(0, 0)); // {weight, vertex}
+
         boolean[] inMST = new boolean[V];
-        key[0] = 0;
+        int sum = 0;
 
-        for (int count = 1; count <= V - 1; count++) {
-            int u = minKey(inMST, key);
-            inMST[u] = true;
+        while (!pq.isEmpty()) {
+            Pair p = pq.poll();
 
-            for (int v = 0; v < V; v++) {
-                if (graph[u][v] != 0 && !inMST[v] && graph[u][v] < key[v]) {
-                    key[v] = graph[u][v];
+            int wt = p.weight;
+            int node = p.vertex;
+
+            if (inMST[node])
+                continue;
+
+            inMST[node] = true; // added to MST
+            sum += wt;
+
+            for (Pair tmp : adj.get(node)) {
+                int neighbor = tmp.vertex;
+                int neighborWt = tmp.weight;
+
+                if (!inMST[neighbor]) {
+                    pq.offer(new Pair(neighborWt, neighbor));
                 }
             }
         }
 
-        int cost = 0;
-        for (int i : key) {
-            cost += i;
-        }
-        return cost;
+        return sum;
     }
 
     public int minCostConnectPoints(int[][] points) {
-        int n = points.length;
-        int[][] graph = new int[n][n];
+        int V = points.length;
 
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                int[] p1 = points[i];
-                int[] p2 = points[j];
-                int md = Math.abs(p1[0] - p2[0]) + Math.abs(p1[1] - p2[1]);
-                graph[i][j] = md;
-                graph[j][i] = md;
+        List<List<Pair>> adj = new ArrayList<>();
+        for (int i = 0; i < V; i++) {
+            adj.add(new ArrayList<>());
+        }
+
+        for (int i = 0; i < V; i++) {
+            for (int j = i + 1; j < V; j++) {
+                int x1 = points[i][0];
+                int y1 = points[i][1];
+
+                int x2 = points[j][0];
+                int y2 = points[j][1];
+
+                int d = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+
+                adj.get(i).add(new Pair(d, j));
+                adj.get(j).add(new Pair(d, i));
             }
         }
 
-        return MST(graph, n);
+        return minMST(adj, V);
     }
-
 }
