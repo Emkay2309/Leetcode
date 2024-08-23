@@ -30,12 +30,12 @@ class Solution {
             vis[node] = true; // added to MST
             sum += wt;
 
-            for (Pair tmp : adj.get(node)) {
-                int neighbor = tmp.vertex;
-                int neighborWt = tmp.weight;
+            for (Pair neigh : adj.get(node)) {
+                int neighborVertex = neigh.vertex;
+                int neighborWt = neigh.weight;
 
-                if (!vis[neighbor]) {
-                    pq.offer(new Pair(neighborWt, neighbor));
+                if (!vis[neighborVertex]) {
+                    pq.offer(new Pair(neighborWt, neighborVertex));
                 }
             }
         }
