@@ -15,7 +15,7 @@ class Solution {
         PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.weight)); // min heap
         pq.offer(new Pair(0, 0)); // {weight, vertex}
 
-        boolean[] inMST = new boolean[V];
+        boolean[] vis = new boolean[V];
         int sum = 0;
 
         while (!pq.isEmpty()) {
@@ -24,17 +24,17 @@ class Solution {
             int wt = p.weight;
             int node = p.vertex;
 
-            if (inMST[node])
+            if (vis[node])
                 continue;
 
-            inMST[node] = true; // added to MST
+            vis[node] = true; // added to MST
             sum += wt;
 
             for (Pair tmp : adj.get(node)) {
                 int neighbor = tmp.vertex;
                 int neighborWt = tmp.weight;
 
-                if (!inMST[neighbor]) {
+                if (!vis[neighbor]) {
                     pq.offer(new Pair(neighborWt, neighbor));
                 }
             }
