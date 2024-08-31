@@ -1,15 +1,3 @@
-import java.util.*;
-
-class Pair {
-    int weight;
-    int vertex;
-
-    Pair(int weight, int vertex) {
-        this.weight = weight;
-        this.vertex = vertex;
-    }
-}
-
 class Solution {
     public int minMST(List<List<Pair>> adj, int V) {
         PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.weight)); // min heap
@@ -51,7 +39,7 @@ class Solution {
             adj.add(new ArrayList<>());
         }
 
-        for (int i = 0; i < V; i++) {
+        for (int i = 0; i < V-1; i++) {
             for (int j = i + 1; j < V; j++) {
                 int x1 = points[i][0];
                 int y1 = points[i][1];
@@ -65,7 +53,16 @@ class Solution {
                 adj.get(j).add(new Pair(d, i));
             }
         }
-
         return minMST(adj, V);
+    }
+}
+
+class Pair {
+    int weight;
+    int vertex;
+
+    Pair(int weight, int vertex) {
+        this.weight = weight;
+        this.vertex = vertex;
     }
 }
