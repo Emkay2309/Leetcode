@@ -19,12 +19,19 @@ class Solution {
         }
 
         for(int i=0 ; i<n ; i++) {
-            if(!vis[i] && indegree[i] == 0) {
-                dfs(i , vis , adj);
+            if(indegree[i] == 0) {
                 ans.add(i);
             }
         }
         return ans;
+
+        // for(int i=0 ; i<n ; i++) {
+        //     if(!vis[i] && indegree[i] == 0) {
+        //         dfs(i , vis , adj);
+        //         ans.add(i);
+        //     }
+        // }
+        // return ans;
     }
 
     public void dfs(int curr , boolean [] vis , List<List<Integer>> adj) {
