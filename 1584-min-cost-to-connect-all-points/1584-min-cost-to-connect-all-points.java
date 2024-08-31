@@ -1,6 +1,6 @@
 class Solution {
     public int minMST(List<List<Pair>> adj, int V) {
-        PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.weight)); // min heap
+        PriorityQueue<Pair> pq = new PriorityQueue<>((x,y) -> x.weight - y.weight); // min heap
         pq.offer(new Pair(0, 0)); // {weight, vertex}
 
         boolean[] vis = new boolean[V];
