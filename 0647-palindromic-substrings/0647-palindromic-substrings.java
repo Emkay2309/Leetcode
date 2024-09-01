@@ -2,28 +2,32 @@ class Solution {
     public int countSubstrings(String s) {
         int n = s.length();
         int ans = 0;
+        boolean [][] dp = new boolean [n][n];
 
-        Boolean [][] dp = new Boolean [n][n];
-        for(Boolean [] a : dp) {
-            Arrays.fill(a , null);
-        }
+        for(int len=1 ; len<=n ; len++) {
+            for(int i=0 ; i+len-1 < n  ; i++) {
+                int j = i+len-1;
 
-        for(int i=0 ; i<n ; i++) {
-            for(int j=i ; j<n ; j++) {
-                if(check( i , j , s , dp)) ans++;
+                //cases
+                //if len == 1
+                if(i == j) {
+                    dp[i][j] = true;
+                }
+                else if(i+1 == j) {
+                    dp[i][j] = s.charAt(i) == s.charAt(j);
+                }
+                else {
+                    boolean curr = s.charAt(i) == s.charAt(j);
+                    boolean curr1 = dp[i+1][j-1];
+                    dp[i][j] = curr && curr1;
+                }
+
+
+                if(dp[i][j] == true) {
+                    ans++;
+                }
             }
         }
         return ans;
-    }
-
-    public boolean check(int i, int j , String s , Boolean [][] dp) {
-        if(i > j) return true;
-
-        if(dp[i][j] != null) return dp[i][j];
-
-        if(s.charAt(i) == s.charAt(j)) {
-            return dp[i][j] = check(i+1 , j-1 , s , dp);
-        }
-        return  dp[i][j] = false;
     }
 }
