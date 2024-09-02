@@ -1,6 +1,6 @@
 class Solution {
     public int chalkReplacer(int[] chalk, int k) {
-        int sum = 0;
+        long sum = 0;
         for(int a : chalk) {
             sum += a;
         }
