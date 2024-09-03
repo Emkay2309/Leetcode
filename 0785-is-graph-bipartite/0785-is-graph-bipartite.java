@@ -6,10 +6,10 @@ class Solution {
 
         for(int i=0 ; i<V ; i++) {
             if(colors[i] == -1) {
-                //boolean checkDfs = dfs( i , 0 , colors , graph );
+                boolean checkDfs = dfs( i , 0 , colors , graph );
                 boolean checkBfs = bfs( i , 0 , colors , graph );
 
-                if(checkBfs == false) return false;
+                if(checkDfs == false) return false;
             }
         }
         return true;
@@ -39,18 +39,17 @@ class Solution {
         colors[curr] = c;
 
         while(!q.isEmpty()) {
-            int node = q.poll();
-            int size = mat[node].length;
+            int currNode = q.poll();
+            int size = mat[currNode].length;
 
-            for(int j=0 ; j<size ; j++) {
-                int neigh = mat[node][j];
+            for(int neigh=0 ; neigh < size ; neigh++) {
+                int neighNode = mat[currNode][neigh];
 
-                if(colors[neigh] == -1) {
-                    q.add(neigh);
-                    int cc = colors[node];
-                    colors[neigh] = 1 - cc;
+                if(colors[neighNode] == -1) {
+                    q.add(neighNode);
+                    colors[neighNode] = 1 - colors[currNode];
                 }
-                else if(colors[neigh] == colors[node]) {
+                else if(colors[neighNode] == colors[currNode]) {
                     return false;
                 }
             }
