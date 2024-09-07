@@ -14,6 +14,13 @@
  * }
  */
 class Solution {
+
+    // The time complexity is O(n), where n is the number of nodes in the binary tree. 
+    // This is because each node is visited once during the traversal. 
+    // The space complexity is also O(n) due to the queue storing all nodes at the 
+    // current level before moving to the next level. 
+    // The solution efficiently handles both time and space usage for level-order traversal.
+    
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
         if(root == null) return ans;
