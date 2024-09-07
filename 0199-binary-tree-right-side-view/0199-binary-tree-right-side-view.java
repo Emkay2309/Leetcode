@@ -14,45 +14,62 @@
  * }
  */
 class Solution {
+
+    public void preOrder(TreeNode root , int level , List<Integer>ans) {
+        if(root == null) return;
+
+        if(ans.size() < level) ans.add(root.val);
+
+        preOrder(root.right , level+1 , ans);
+        preOrder(root.left , level+1 , ans);
+    }
     public List<Integer> rightSideView(TreeNode root) {
+        if(root == null) return new ArrayList<>();
+        List<Integer> ans = new ArrayList<>();
+        preOrder(root , 1 , ans);
+        return ans;
+
+        // List<List<Integer>> ans = levelOrder(root);
+
+        // List<Integer> ans1 = new ArrayList<>();
+
+        // for(int i=0 ; i<ans.size() ; i++) {
+        //     for(int j=0 ; j<ans.get(i).size() ; j++) {
+        //         if(j == ans.get(i).size()-1 ) {
+        //             ans1.add(ans.get(i).get(j));
+        //         }
+        //     }
+        // }
+
+        // return ans1;
+    }
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> ans = new ArrayList<>();
+        if(root == null) return ans;
         
-        if( root == null) {
-            return new ArrayList<>();
-        }
-        
-        ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
-        ArrayList<Integer> temp = new ArrayList<>();
-        
-        Queue <TreeNode> q = new LinkedList<>();
-        
+        Queue<TreeNode> q = new LinkedList<>();
+
         q.add(root);
-        q.add(null);
-        
-        while( q.size()> 1 ) {
-            TreeNode curr = q.poll();
-            
-            if( curr != null) {
-                temp.add( curr.val);
-                if( curr.left != null) {
+
+        while(!q.isEmpty()) {
+            int size = q.size();
+            ArrayList<Integer> temp = new ArrayList<>();
+
+            for(int i=0 ; i<size ; i++) {
+                TreeNode curr = q.poll();
+
+                if(curr.left != null) {
                     q.add(curr.left);
                 }
                 if(curr.right != null) {
                     q.add(curr.right);
                 }
+                temp.add(curr.val);
             }
-            else {
-                ans.add(new ArrayList<>(temp));
-                temp = new ArrayList<>();
-                q.add(null);
-            }
+            ans.add(new ArrayList<>(temp));
         }
-        ans.add(new ArrayList<>(temp));
-        
-        ArrayList<Integer> check = new ArrayList<>();
-        
-        for(int i=0 ; i<ans.size(); i++) {
-            check.add(ans.get(i).get(ans.get(i).size()-1));
-        }
-        return check;
+
+        return ans;
     }
 }
