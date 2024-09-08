@@ -1,22 +1,22 @@
 class Solution {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+        int n = rooms.size();
         int count = 0;
-        int V = rooms.size();
-        boolean [] vis = new boolean [rooms.size()];
-        for(int i=0 ; i<V ; i++)  {
+        boolean [] vis = new boolean [n];        
+        for(int i=0 ; i<n ; i++) {  
             if(!vis[i]) {
+                dfs(i , vis , rooms);
                 count++;
-                dfs(rooms , vis , i );
             }
         }
         return count == 1;
     }
-    public void dfs(List<List<Integer>> adj , boolean [] vis , int curr)  {
-        vis[curr] = true;
 
+    public void dfs(int curr , boolean [] vis , List<List<Integer>> adj) {
+        vis[curr] = true;
         for(int neigh : adj.get(curr)) {
             if(!vis[neigh]) {
-                dfs(adj , vis , neigh);
+                dfs(neigh , vis , adj);
             }
         }
     }
