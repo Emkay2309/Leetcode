@@ -1,4 +1,8 @@
 class Solution {
+    // Time Complexity: 
+    // \U0001d442(\U0001d449+\U0001d438+\U0001d443) where \U0001d443 can be as large as O(2 power v)  in the worst case.
+    // Space Complexity:  O(V+P×V), where 
+    //P is the number of paths from the source to the destination.
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
         //Create start and dest points
         int start = 0;
