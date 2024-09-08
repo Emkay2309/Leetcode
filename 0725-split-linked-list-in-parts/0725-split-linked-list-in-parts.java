@@ -12,11 +12,15 @@ class Solution {
     //  TC : O(N+N) = O(2N) = O(N)
     //  SC : O(N)
     public ListNode[] splitListToParts(ListNode head, int k) {
+        ListNode [] ans = new ListNode [k];
+        if(head == null) {
+            return ans;
+        }
         int n = count(head);
         int each = n/k;
         int extra = n%k;
 
-        ListNode [] ans = new ListNode [k];
+        
         int u = 0;
         ListNode curr = head;
         ListNode prev = null;
