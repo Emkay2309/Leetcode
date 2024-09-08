@@ -1,51 +1,29 @@
 class Solution {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        DSU dsu = new DSU(n);
-
-        // Union all edges
+        Map<Integer, List<Integer>> graph = new HashMap<>();
         for (int[] edge : edges) {
-            dsu.union(edge[0], edge[1]);
+            int u = edge[0];
+            int v = edge[1];
+            graph.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
+            graph.computeIfAbsent(v, k -> new ArrayList<>()).add(u);
         }
-
-        // Check if source and destination belong to the same component
-        return dsu.find(source) == dsu.find(destination);
+        
+        Set<Integer> visited = new HashSet<>();
+        return dfs(source, destination, graph, visited);
     }
-}
-
-class DSU   {
-    int rank [] ;
-    int par [] ;
-
-    DSU(int V) {
-        rank = new int [V];
-        par = new int [V];
-
-        for(int i=0; i<V ; i++ ) {
-            rank[i] = 1;
-            par[i] = i;
+    
+    private boolean dfs(int node, int destination, Map<Integer, List<Integer>> graph, Set<Integer> visited) {
+        if (node == destination) {
+            return true;
         }
-    } 
-
-    public int find(int u) {
-        if(par[u] == u) return u;
-        return par[u] = find(par[u]);
-    }
-
-    public void union(int u , int v) {
-        int up = find(u);
-        int vp = find(v);
-
-        if(up == vp) return;
-
-        if(rank[up] > rank[vp] ) {
-            par[vp] = up;
+        visited.add(node);
+        for (int neighbor : graph.getOrDefault(node, new ArrayList<>())) {
+            if (!visited.contains(neighbor)) {
+                if (dfs(neighbor, destination, graph, visited)) {
+                    return true;
+                }
+            }
         }
-        else if(rank[vp] > rank[up]) {
-            par[up] = vp;
-        }
-        else {
-            par[vp] = up;
-            rank[up]++;
-        }
+        return false;
     }
 }
