@@ -1,27 +1,31 @@
 class Solution {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        for (int[] edge : edges) {
+        List<List<Integer>> adj = new ArrayList<>();
+        for(int i=0 ; i<n ; i++) {
+            adj.add(new ArrayList<>());
+        }
+
+        for(int [] edge : edges) {
             int u = edge[0];
             int v = edge[1];
-            graph.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
-            graph.computeIfAbsent(v, k -> new ArrayList<>()).add(u);
+
+            adj.get(u).add(v);
+            adj.get(v).add(u);
         }
-        
-        Set<Integer> visited = new HashSet<>();
-        return dfs(source, destination, graph, visited);
+
+        boolean [] vis = new boolean [n];
+        return dfs(source , destination , adj , vis);
     }
-    
-    private boolean dfs(int node, int destination, Map<Integer, List<Integer>> graph, Set<Integer> visited) {
-        if (node == destination) {
-            return true;
-        }
-        visited.add(node);
-        for (int neighbor : graph.getOrDefault(node, new ArrayList<>())) {
-            if (!visited.contains(neighbor)) {
-                if (dfs(neighbor, destination, graph, visited)) {
-                    return true;
-                }
+
+    public boolean dfs(int curr , int dest , List<List<Integer>> adj  , boolean [] vis) {
+        vis[curr] = true;
+
+        if(curr == dest) return true;
+
+        for(int neigh : adj.get(curr)) {
+            if(!vis[neigh]) {
+                boolean check = dfs(neigh , dest , adj , vis);
+                if(check) return true;
             }
         }
         return false;
