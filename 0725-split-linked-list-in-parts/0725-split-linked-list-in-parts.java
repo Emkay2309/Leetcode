@@ -20,7 +20,6 @@ class Solution {
         int each = n/k;
         int extra = n%k;
 
-        
         int u = 0;
         ListNode curr = head;
         ListNode prev = null;
