@@ -13,36 +13,37 @@
  *     }
  * }
  */
-
 class Solution {
-    // Time Complexity (TC): O(n^2) 
-    // Space Complexity (SC): O(h), where h is the height of the tree
-    // Explanation:
-    // TC: In worst case, we might need to traverse the entire inorder array for each node.
-    // SC: Maximum recursion depth is equal to the height of the binary tree.
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        int n = inorder.length;
-        if(n == 1) return new TreeNode(inorder[0]);
+        int start = 0;
+        int end = preorder.length-1;
 
         int [] index = {0};
-        return solve(preorder , inorder , 0 , n-1 , index);
+
+        return createTree(preorder , inorder , index , start , end);
     }
 
-    public TreeNode solve(int [] pre , int [] in , int start , int end , int [] idx) {
+    public TreeNode createTree(int [] pre , int [] in , int [] index , int start , int end) {
         if(start > end) return null;
 
-        int rootVal = pre[idx[0]];
+        //find root in preorder // create root with the value found in preOrder
+        int rootVal = pre[index[0]];
         TreeNode root = new TreeNode(rootVal);
 
-        int i=0;
-        for( ; i<=end ; i++) {
-            if(in[i] == rootVal) break;
+        //find at what point the root is in Inorder to get the left and right child
+        int i=start;
+        for(; i<=end ; i++) {
+            //find root in Inorder 
+            if(in[i] == rootVal) {
+                break;
+            }
         }
 
-        idx[0]++;
+        //move to the next index for the iteration so that we can add the left and right child
+        index[0]++;
 
-        root.left = solve(pre , in , start , i-1 , idx);
-        root.right = solve(pre , in , i+1 , end , idx);
+        root.left  = createTree(pre , in , index , start , i-1 );
+        root.right = createTree(pre , in , index , i+1 , end);
 
         return root;
     }
