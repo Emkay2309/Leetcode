@@ -13,29 +13,26 @@
  *     }
  * }
  */
-
-
 class Solution {
     public boolean isCompleteTree(TreeNode root) {
-        boolean past = false;
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
+        //count total nodes in the tree
+        int total = count(root);
+        //root       --> i
+        //left child --> 2*i
+        //right child--> 2*i+1;
 
-        while(!q.isEmpty()) {
-            TreeNode curr = q.poll();
+        return dfs(root , total , 1);
+    }
+    public int count (TreeNode root) {
+        if(root == null) return 0;
+        return 1 + count(root.left) + count(root.right);
+    }
+    public boolean dfs(TreeNode root , int count , int i) {
+        if(root == null) return true;
 
-            //if the curr is null , so make past true
-            if(curr == null) {
-                past = true;
-            }
-            else {// curr not null so add child , but before check 
-                 // past me null kvi mila h kya 
-                if(past == true) return false;
-
-                q.add(curr.left);
-                q.add(curr.right);
-            }
-        }
-        return true;
+        //At any point if i is more than total nodes ,
+        //means we have added null so it will have a null so not CBT
+        if(i > count) return false;
+        return dfs(root.left , count , 2*i) && dfs(root.right , count , 2*i+1);
     }
 }
