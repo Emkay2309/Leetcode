@@ -13,40 +13,37 @@
  *     }
  * }
  */
-
-
 class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        // Create a hashmap to store the index of each value in inorder
-        HashMap<Integer, Integer> inorderIndexMap = new HashMap<>();
-        for (int i = 0; i < inorder.length; i++) {
-            inorderIndexMap.put(inorder[i], i);
-        }
-        
-        // Call the helper function to build the tree
-        return buildTreeHelper(preorder, inorderIndexMap, 0, preorder.length - 1, new int[]{0});
+        int start = 0;
+        int end = preorder.length-1;
+
+        int [] index = {0};
+
+        return createTree(preorder , inorder , index , start , end);
     }
 
-    private TreeNode buildTreeHelper(int[] preorder, HashMap<Integer, Integer> inorderIndexMap, 
-                                      int start, int end, int [] index) {
-        // Base case
-        if (start > end) {
-            return null;
-        }
+    public TreeNode createTree(int [] pre , int [] in , int [] index , int start , int end) {
+        if(start > end) return null;
 
-        // Get the root value from preorder
-        int rootVal = preorder[index[0]];
+        //find root in preorder // create root with the value found in preOrder
+        int rootVal = pre[index[0]];
         TreeNode root = new TreeNode(rootVal);
 
-        // Increment the preorder index
+        //find at what point the root is in Inorder to get the left and right child
+        int i=start;
+        for(; i<=end ; i++) {
+            //find root in Inorder 
+            if(in[i] == rootVal) {
+                break;
+            }
+        }
+
+        //move to the next index for the iteration so that we can add the left and right child
         index[0]++;
 
-        // Find the index of the root in inorder
-        int inOrderRoot = inorderIndexMap.get(rootVal);
-
-        // Recursively build the left and right subtrees
-        root.left = buildTreeHelper(preorder, inorderIndexMap, start, inOrderRoot - 1, index);
-        root.right = buildTreeHelper(preorder, inorderIndexMap, inOrderRoot + 1, end, index);
+        root.left  = createTree(pre , in , index , start , i-1 );
+        root.right = createTree(pre , in , index , i+1 , end);
 
         return root;
     }
