@@ -10,35 +10,32 @@
  */
 class Solution {
     public ListNode swapNodes(ListNode head, int k) {
-        //Keep 2 pointers to iterate on the list
-        ListNode slow = head;
-        ListNode fast = head;
-
-        //set first pointer just before the first pointer
-        while( --k > 0) {
-            fast = fast.next;
-        }
-
-        //assign node to the first required point
-        ListNode first = fast;
-
-        //now iterate fast till the last
-        //at this point slow will be exactly k steps before
-        while(fast.next != null) {
-            slow = slow.next;
-            fast = fast.next;
-        }
         
-        //assign node to the first required point
-        ListNode second = slow;
+        ListNode dummy = head;
+        ListNode ans = dummy;
+        int count = 0;
+        while(dummy != null) {
+            dummy = dummy.next;
+            count++;
+        }
 
-        //swap the values of bioth the pointers
-        int temp = second.val;
-        second.val = first.val;
-        first.val = temp;
+        int k1 = k;
+        int k2 = count - k + 1;
 
+        ListNode a = head;
+        while(k1-- > 1 && a != null) {
+            a = a.next;
+        }
 
-        //return head
-        return head;
+        ListNode b = head;
+        while(k2-- > 1 && b != null) {
+            b = b.next;
+        }
+
+        int temp = a.val;
+        a.val = b.val;
+        b.val = temp;
+
+        return ans;
     }
 }
