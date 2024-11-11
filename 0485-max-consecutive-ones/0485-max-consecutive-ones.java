@@ -7,9 +7,9 @@ class Solution {
         for(int i=0 ; i<n ; i++) {
             if(nums[i] == 0) {
                 ans = Math.max(ans , i-zero);
-                zero = i;
+                zero = i+1;
             }
         } 
-        return Math.max(ans-1 , n-zero-1);
+        return Math.max(ans , n-zero);
     }
 }
