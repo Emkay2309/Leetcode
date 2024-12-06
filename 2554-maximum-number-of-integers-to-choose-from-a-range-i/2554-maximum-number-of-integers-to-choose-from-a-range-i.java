@@ -1,6 +1,6 @@
 class Solution {
     public int maxCount(int [] banned, int n, int maxSum) {
-        Arrays.sort(banned);
+        
         int count = 0;
         int sum = 0;
         HashSet<Integer> set = new HashSet<>();
