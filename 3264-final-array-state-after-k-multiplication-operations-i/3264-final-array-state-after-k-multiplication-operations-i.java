@@ -1,20 +1,33 @@
 class Solution {
     public int[] getFinalState(int[] nums, int k, int multiplier) {
+        PriorityQueue<Pair> pq = new PriorityQueue<>((a,b)-> a.element==b.element ? a.index-b.index : a.element - b.element);
         int n = nums.length;
-        int check = k;
 
-        for(int i=0 ; i<k ; i++) {
-            int min = Integer.MAX_VALUE;
-            int index = -1;
-            for(int j=0 ; j<n ; j++) {
-                if(nums[j] < min) {
-                    min = nums[j];
-                    index = j;
-                }
-            }
-            if(index != -1) 
-                nums[index] *= multiplier;
+        for(int i=0 ; i<n ; i++) {
+            Pair pair = new Pair(nums[i] , i);
+            pq.add(pair);
+        }
+
+        while(k-- > 0 && !pq.isEmpty()) {
+            Pair curr = pq.poll();
+            int currEle = curr.element;
+            int currInd = curr.index;
+            int newValue = currEle * multiplier;
+            nums[currInd] = newValue;
+
+            Pair pair = new Pair(newValue , currInd);
+            pq.add(pair);
         }
         return nums;
+    }
+}
+
+class Pair {
+    int element;
+    int index;
+
+    Pair(int element , int index) {
+        this.element = element;
+        this.index = index;
     }
 }
