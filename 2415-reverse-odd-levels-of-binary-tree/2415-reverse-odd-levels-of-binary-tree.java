@@ -15,21 +15,44 @@
  */
 class Solution {
     public TreeNode reverseOddLevels(TreeNode root) {
-        if(root == null) return null;
-        dfs(root.left , root.right , 1);
-        return root;
-    }
+        if(root == null) return root;
 
-    public void dfs(TreeNode root1 , TreeNode root2 , int level) {
-        if(root1 == null || root2 == null) return ;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        int level = 0;
 
-        if(level % 2 == 1) {
-            int temp = root1.val;
-            root1.val = root2.val;
-            root2.val = temp; 
+        while(!q.isEmpty()) {
+            int size = q.size();
+            ArrayList<TreeNode> levelNodes = new ArrayList<>();
+
+            while(size-- > 0) {
+                TreeNode temp = q.poll();
+                levelNodes.add(temp);
+
+                if(temp.left != null) {
+                    q.add(temp.left);
+                }
+                if(temp.right != null) {
+                    q.add(temp.right);
+                }
+            }
+
+            if(level % 2 == 1) { //Odd Level
+                int i=0;
+                int j=levelNodes.size()-1;
+
+                while( i < j) {
+                    int tempVal = levelNodes.get(i).val;
+                    levelNodes.get(i).val = levelNodes.get(j).val;
+                    levelNodes.get(j).val = tempVal;
+
+                    i++;
+                    j--;
+                }
+            }
+            level++;
         }
 
-        dfs(root1.left , root2.right , level+1);
-        dfs(root1.right , root2.left , level+1);
+        return root;
     }
 }
