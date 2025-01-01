@@ -1,24 +1,26 @@
-class Solution {
-    public int maxScore(String s) {
-        int n = s.length();
-        int ans = Integer.MIN_VALUE;
+public class Solution {
+    public int maxScore(String inputStr) {
+        int totalOnes = 0;
+        int zerosCount = 0;
+        int onesCount = 0;
+        int bestScore = Integer.MIN_VALUE;
 
-        for(int i=0; i<n-1 ; i++) {
-            
-            // left side count zero till i
-            int zero = 0;
-            for(int j=0 ; j<=i ; j++) {
-                if(s.charAt(j) == '0') zero++;
-            }
-
-            //right side count one till n-1
-            int one = 0;
-            for(int j=i+1 ; j<n ; j++) {
-                if(s.charAt(j) == '1') one++;
-            }
-
-            ans = Math.max(ans , zero+one);
+        // Count total ones in the string
+        for (char ch : inputStr.toCharArray()) {
+            if (ch == '1') totalOnes++;
         }
-        return ans;
+
+        // Traverse the string and calculate scores
+        for (int i = 0; i < inputStr.length() - 1; i++) {
+            if (inputStr.charAt(i) == '0') zerosCount++;
+            else onesCount++;
+
+            // Calculate score
+            int currentScore = zerosCount + (totalOnes - onesCount);
+            bestScore = Math.max(bestScore, currentScore);
+
+        }
+
+        return bestScore;
     }
 }
