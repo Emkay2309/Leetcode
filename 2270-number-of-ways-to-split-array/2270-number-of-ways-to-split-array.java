@@ -2,8 +2,8 @@ class Solution {
     public int waysToSplitArray(int[] nums) {
         int n  = nums.length;
         int ans = 0;
-        int total = 0;
-        int sum = 0;
+        long total = 0;
+        long sum = 0;
 
         for(int a : nums) {
             total += a;
