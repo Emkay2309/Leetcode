@@ -1,37 +1,52 @@
 class Solution {
     public double knightProbability(int n, int k, int row, int column) {
-        // DP table where dp[step][r][c] stores probability of being on (r,c) after "step" moves
-        double[][][] dp = new double[k + 1][n][n];
+        // Two DP arrays to store current and previous step probabilities
+        double[][] prev = new double[n][n];
+        double[][] curr = new double[n][n];
 
-        // Base case: If no moves are left, the knight is definitely on the board
-        dp[0][row][column] = 1.0;
+        // Base case: The knight starts at (row, column)
+        prev[row][column] = 1.0;
 
         // All possible knight moves
         int[][] directions = {{1,2}, {1,-2}, {-1,2}, {-1,-2}, {2,1}, {2,-1}, {-2,1}, {-2,-1}};
 
-        // Iterate over the number of moves from 1 to k
+        // Iterate over the number of moves
         for (int step = 1; step <= k; step++) {
+            // Reset current step DP table
             for (int r = 0; r < n; r++) {
                 for (int c = 0; c < n; c++) {
-                    // Transition from previous step
-                    for (int[] dir : directions) {
-                        int prevRow = r - dir[0];
-                        int prevCol = c - dir[1];
+                    curr[r][c] = 0.0;
+                }
+            }
 
-                        // Check if the previous position was within bounds
-                        if (prevRow >= 0 && prevRow < n && prevCol >= 0 && prevCol < n) {
-                            dp[step][r][c] += dp[step - 1][prevRow][prevCol] / 8.0;
+            // Fill the DP table for the current step
+            for (int r = 0; r < n; r++) {
+                for (int c = 0; c < n; c++) {
+                    if (prev[r][c] > 0) {  // Only process cells with probability > 0
+                        for (int[] dir : directions) {
+                            int newRow = r + dir[0];
+                            int newCol = c + dir[1];
+
+                            // If the new position is within bounds, add probability
+                            if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n) {
+                                curr[newRow][newCol] += prev[r][c] / 8.0;
+                            }
                         }
                     }
                 }
             }
+
+            // Swap `prev` and `curr` to save space (rolling array technique)
+            double[][] temp = prev;
+            prev = curr;
+            curr = temp;
         }
 
-        // Sum up probabilities after k moves
+        // Sum up probabilities from the last valid `prev` array
         double result = 0.0;
         for (int r = 0; r < n; r++) {
             for (int c = 0; c < n; c++) {
-                result += dp[k][r][c];
+                result += prev[r][c];
             }
         }
 
