@@ -10,32 +10,31 @@
  */
 class Solution {
     public ListNode swapNodes(ListNode head, int k) {
+        ListNode firstNode = null, secondNode = null;
+        ListNode curr = head;
+        int length = 0;
         
-        ListNode dummy = head;
-        ListNode ans = dummy;
-        int count = 0;
-        while(dummy != null) {
-            dummy = dummy.next;
-            count++;
+        // Find length and the k-th node from start
+        while (curr != null) {
+            length++;
+            if (length == k) {
+                firstNode = curr;
+            }
+            curr = curr.next;
         }
-
-        int k1 = k;
-        int k2 = count - k + 1;
-
-        ListNode a = head;
-        while(k1-- > 1 && a != null) {
-            a = a.next;
+        
+        // Find the k-th node from end (length-k+1 from start)
+        curr = head;
+        for (int i = 1; i <= length - k; i++) {
+            curr = curr.next;
         }
-
-        ListNode b = head;
-        while(k2-- > 1 && b != null) {
-            b = b.next;
-        }
-
-        int temp = a.val;
-        a.val = b.val;
-        b.val = temp;
-
-        return ans;
+        secondNode = curr;
+        
+        // Swap values
+        int temp = firstNode.val;
+        firstNode.val = secondNode.val;
+        secondNode.val = temp;
+        
+        return head;
     }
 }
