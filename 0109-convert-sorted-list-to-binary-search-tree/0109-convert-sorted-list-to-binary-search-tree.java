@@ -25,30 +25,27 @@
  */
 class Solution {
     public TreeNode sortedListToBST(ListNode head) {
-        if(head == null) return null;
-        if(head.next == null) return new TreeNode(head.val);
-
-        //find mid
-        ListNode slow = head;
-        ListNode slow_prev = slow;
-        ListNode fast = head;
-
-        while(fast != null && fast.next != null) {
-            slow_prev = slow;
-            slow = slow.next;
-            fast = fast.next.next;
+        List<Integer> list = new ArrayList<>();
+        while(head != null) {
+            list.add(head.val);
+            head = head.next;
         }
 
-        //now the slow will be at mid
+        return createTree( 0 , list.size()-1 , list);
+    }
 
-        TreeNode root = new TreeNode(slow.val);
+    public TreeNode createTree(int start , int end , List<Integer> list) {
+        if(start > end) {
+            return null;
+        }
 
-        slow_prev.next = null;
+        int mid = (start+end)/2;
+        int val = list.get(mid);
 
-        root.left = sortedListToBST(head);
-        root.right = sortedListToBST(slow.next); 
+        TreeNode root = new TreeNode(val);
+        root.left = createTree(start , mid-1 , list);
+        root.right = createTree(mid+1 , end , list);
 
         return root;
-
     }
 }
