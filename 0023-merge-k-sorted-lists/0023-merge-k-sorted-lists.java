@@ -10,27 +10,31 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        if(lists.length == 0  )  {
-            return null;
-        }
-        return mergeSort(lists , 0 , lists.length-1 );
-    }
-    public ListNode mergeSort(ListNode [] lists , int start , int end)  {
-        if( start == end) {
-            return lists[start];
-        }
-        int mid = (start + end)/2;
+        int n = lists.length;
+        if(n==0 ) return null;
+        if(n == 1) return lists[0];
 
-        ListNode left =  mergeSort(lists , start , mid);
-        ListNode right =  mergeSort(lists , mid+1 , end);
-
-        return merge(left,right);
+        return partMerge(0, n-1 , lists);
     }
-    public ListNode  merge(ListNode l1 , ListNode l2)  {
+
+    public ListNode partMerge(int start , int end , ListNode [] list) {
+        if(start == end) return list[start];
+
+        if(start == end-1) return merge(list[start] , list[end]);
+
+        int mid = start + (end-start)/2;
+
+        ListNode leftList =  partMerge(start , mid , list);
+        ListNode rightList = partMerge(mid+1 , end , list);
+
+        return merge(leftList , rightList);
+    }
+
+    public ListNode mergeLoop(ListNode l1 , ListNode l2) {
         ListNode dummy = new ListNode(-1);
         ListNode ans = dummy;
 
-        while( l1 != null  &&   l2 != null) {
+        while(l1 != null && l2 != null) {
             if(l1.val <= l2.val) {
                 ans.next = l1;
                 l1 = l1.next;
@@ -48,5 +52,20 @@ class Solution {
             ans.next = l2;
         }
         return dummy.next;
+    }
+
+    public ListNode merge(ListNode l1, ListNode l2) {
+        if(l1 == null) return l2;
+        if(l2 == null) return l1;
+
+        if(l1.val <= l2.val) {
+            l1.next = merge(l1.next , l2);
+            return l1;
+        }
+        else {
+            l2.next = merge(l1 , l2.next);
+            return l2;
+        }
+
     }
 }
