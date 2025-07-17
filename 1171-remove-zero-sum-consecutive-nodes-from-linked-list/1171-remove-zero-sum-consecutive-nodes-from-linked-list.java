@@ -10,32 +10,32 @@
  */
 class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
-        ListNode dummy = new ListNode(0);
+        ListNode dummy = new ListNode (-1);
         dummy.next = head;
+
         ListNode curr = head;
         int pfSum = 0;
-        Map<Integer, ListNode> map = new HashMap<>();
+        Map<Integer,ListNode> map = new HashMap<>();
         map.put(0,dummy);
 
-        while(curr != null) {
-            pfSum += curr.val;
+        while( curr != null) {
+            int val = curr.val;
+            pfSum += val;
 
             if(map.containsKey(pfSum)) {
-                //delete
-
+                // delete
+                int currSum = pfSum;
                 ListNode start = map.get(pfSum);
                 ListNode temp = start;
 
-                int pSum = pfSum;
-
                 while(temp != curr) {
                     temp = temp.next;
-                    pSum += temp.val;
+                    currSum += temp.val;
 
-                    if(temp != curr) {
-                        map.remove(pSum);
-                    }
+                    if(temp != curr) 
+                        map.remove(currSum);
                 }
+                // make conenction
                 start.next = curr.next;
             }
             else {
@@ -43,7 +43,6 @@ class Solution {
             }
             curr = curr.next;
         }
-
         return dummy.next;
     }
 }
