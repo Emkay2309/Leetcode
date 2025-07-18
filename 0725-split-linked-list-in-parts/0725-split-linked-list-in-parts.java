@@ -9,40 +9,30 @@
  * }
  */
 class Solution {
-    //  TC : O(N+N) = O(2N) = O(N)
-    //  SC : O(N)
     public ListNode[] splitListToParts(ListNode head, int k) {
-        ListNode [] ans = new ListNode [k];
-        if(head == null) {
-            return ans;
-        }
-        int n = count(head);
-        int each = n/k;
-        int extra = n%k;
-
-        int u = 0;
+        int len = 0;
         ListNode curr = head;
-        ListNode prev = null;
+        while (curr != null) {
+            len++;
+            curr = curr.next;
+        }
 
-        for(int i=0 ; i<k ; i++) {
+        ListNode[] ans = new ListNode[k];
+        curr = head;
+        int eachBucketNodes = len / k;
+        int extraNodes = len % k;
 
-            ans[u++] = curr;
-
-            for(int j=1 ; j <= each+(extra>0 ? 1 : 0) ; j++) {
-                prev = curr;
+        for (int i = 0; i < k ; i++) {
+            ans[i] = curr;
+            for (int count = 1; count < eachBucketNodes + (extraNodes > 0 ? 1 : 0); count++) {
                 curr = curr.next;
             }
-            prev.next = null;
-            extra--;
-        }
-        return ans;
-    }
-
-    public int count (ListNode head) {
-        int ans = 0;
-        while(head != null) {
-            ans++;
-            head = head.next;
+            extraNodes--;
+            if (curr != null) {
+                ListNode next = curr.next;
+                curr.next = null;
+                curr = next;
+            }
         }
         return ans;
     }
