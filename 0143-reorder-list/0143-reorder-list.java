@@ -9,45 +9,27 @@
  * }
  */
 class Solution {
+    ListNode curr;
     public void reorderList(ListNode head) {
-        if (head == null || head.next == null) return;
+        curr = head;
+        solve(head);
+    }
+    public void solve(ListNode head) {
+        if(head == null) return;
+        solve(head.next);
 
-        ListNode mid = findMid(head);
-        ListNode rev = reverse(mid.next);
-        mid.next = null;
-        ListNode curr = head;
-
-        while( rev != null) {
-            ListNode tempCurr = curr.next;
-            curr.next = rev;
-
-            ListNode temprev = rev.next;
-            rev.next = tempCurr;
-
-            curr = tempCurr;
-            rev = temprev;
+        if(curr.next == null) {
+            return;
         }
-    }
-
-    public ListNode findMid(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while(fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        else if(curr == head) {
+            head.next = null;
+            return;
         }
-        return slow;
+
+        ListNode temp = curr.next;
+        curr.next = head;
+        head.next = (head == temp) ? null : temp;
+
+        curr = temp;
     }
-
-    public ListNode reverse(ListNode head) {
-        if(head == null || head.next == null) return head;
-
-        ListNode curr = reverse(head.next);
-        head.next.next = head;
-        head.next  = null;
-
-        return curr;
-    }
-
 }
