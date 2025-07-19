@@ -10,23 +10,27 @@
  */
 class Solution {
     public ListNode doubleIt(ListNode head) {
-        int lastCarry = doubleUtil(head);
+        ListNode curr = head , prev = null;
 
-        if(lastCarry > 0) {
-            ListNode carryNode = new ListNode(lastCarry);
-            carryNode.next = head;
-            return carryNode;
-        }
+        while(curr != null) {
+            int newVal = curr.val*2;
+            
+            if(newVal < 10) {
+                curr.val = newVal;
+            }
+            else if(prev != null){
+                curr.val = newVal%10;
+                prev.val += 1;
+            }
+            else {
+                ListNode newHead = new ListNode(1);
+                newHead.next = curr;
+                curr.val = newVal%10;
+                head = newHead;
+            }
+            prev = curr;
+            curr = curr.next;
+        }       
         return head;
-    }
-
-    public int doubleUtil(ListNode head)  {
-        if(head == null) return 0;
-
-        int carry = doubleUtil(head.next);
-        int value = (head.val * 2) + carry;
-        head.val = value%10;
-
-        return value/10;
     }
 }
