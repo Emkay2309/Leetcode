@@ -10,34 +10,28 @@
  */
 class Solution {
     public ListNode insertGreatestCommonDivisors(ListNode head) {
-        if(head == null || head.next == null ) return head;
-
-        ListNode val = helper(head);
-        ListNode ans = head;
-        
-        ans.next = null;
-        ans.next = val;
-
-        return ans;
-    }
-    public ListNode helper(ListNode head) {
-        if(head == null || head.next == null ) return head;
         ListNode curr = head;
-        ListNode next = head.next;
-        ListNode ans ;
         
-        ans = helper(head.next);
-        int val = gcd(curr.val , next.val);
+        while(curr != null && curr.next != null) {
 
-        ListNode newNode = new ListNode(val);
+            ListNode next = curr.next;
 
-        curr.next = newNode;
-        newNode.next = next;
-        return newNode;
+            int value = gcd(curr.val , next.val);
+            ListNode newNode = new ListNode(value);
+
+            curr.next = newNode;
+            newNode.next = next;
+
+            curr = next;
+            next = next.next;
+        }
+        return head;
     }
-    public int gcd(int a , int b ) {
-        if(b==0) return a;
 
-        return gcd(b , a%b);
+    public int gcd(int a, int b) {
+        if (b == 0) {
+            return a;  // Base case: GCD(a, 0) = a
+        }
+        return gcd(b, a % b);  // Recursive step: GCD(a, b) = GCD(b, a % b)
     }
 }
