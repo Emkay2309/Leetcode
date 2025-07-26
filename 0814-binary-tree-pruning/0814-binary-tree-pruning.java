@@ -25,16 +25,4 @@ class Solution {
         }
         return root;
     }
-
-    public boolean is1Present(TreeNode root) {
-        if(root == null) return true;
-
-        if(root.val == 1) return true;
-        if(root.val == 0 ) return false;
-
-        boolean left = is1Present(root.left);
-        boolean right = is1Present(root.right);
-
-        return left && right;
-    }
 }
