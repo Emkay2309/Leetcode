@@ -14,36 +14,28 @@
  * }
  */
 class Solution {
+    public int idx = 0;
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        int start = 0;
-        int end = preorder.length-1;
-
-        int [] index = {0};
-
-        return createTree(preorder , inorder , index , start , end);
+        int n = preorder.length;
+        return dfs(0,n-1,preorder,inorder);
     }
 
-    public TreeNode createTree(int [] pre , int [] in , int [] index , int start , int end) {
+    public TreeNode dfs(int start , int end , int [] pre , int [] in) {
         if(start > end) return null;
 
-        //find root in preorder // create root with the value found in preOrder
-        int rootVal = pre[index[0]];
-        TreeNode root = new TreeNode(rootVal);
-
-        //find at what point the root is in Inorder to get the left and right child
+        int rootVal = pre[idx];
         int i=start;
+
         for(; i<=end ; i++) {
-            //find root in Inorder 
-            if(in[i] == rootVal) {
+            if(rootVal == in[i]) {
                 break;
             }
         }
+        idx++;
+        TreeNode root = new TreeNode(rootVal);
 
-        //move to the next index for the iteration so that we can add the left and right child
-        index[0]++;
-
-        root.left  = createTree(pre , in , index , start , i-1 );
-        root.right = createTree(pre , in , index , i+1 , end);
+        root.left = dfs(start,i-1,pre,in);
+        root.right= dfs(i+1,end,pre,in);
 
         return root;
     }
