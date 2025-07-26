@@ -15,43 +15,35 @@
  */
 class Solution {
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
+        HashSet<Integer> set = new HashSet<>();
         List<TreeNode> ans = new ArrayList<>();
-
-        Set<Integer> set = new HashSet<>();
         for(int a : to_delete) {
             set.add(a);
         }
 
-        dfs(root  , set , ans);
-
-        if(!set.contains(root.val)) {
+        root = dfs(root , set , ans);
+        if(root != null) {
             ans.add(root);
         }
         return ans;
     }
 
-    public TreeNode dfs(TreeNode root , Set<Integer> set , List<TreeNode> ans) {
+    public TreeNode dfs(TreeNode root , HashSet<Integer> set , List<TreeNode> ans) {
         if(root == null) return null;
 
         root.left = dfs(root.left , set , ans);
         root.right = dfs(root.right , set , ans);
 
-        //if the node is to be deleted
         if(set.contains(root.val)) {
-
-            // Before deleting add children to ans if present
             if(root.left != null) {
                 ans.add(root.left);
             }
             if(root.right != null) {
                 ans.add(root.right);
             }
-
-            //delete node
             return null;
         }
         else {
-            // if it is not be deleted
             return root;
         }
     }
