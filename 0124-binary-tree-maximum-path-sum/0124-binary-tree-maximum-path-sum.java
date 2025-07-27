@@ -30,6 +30,6 @@ class Solution {
         int curr = root.val + left + right;
 
         max = Math.max(max , curr); 
-        return root.val;
+        return root.val + Math.max(left , right);
     }
 }
