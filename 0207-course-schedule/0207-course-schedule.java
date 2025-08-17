@@ -1,33 +1,34 @@
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         List<List<Integer>> adj = create(numCourses , prerequisites);
+        int [] indegree = new int [numCourses];
 
-        boolean [] vis = new boolean [numCourses];
-        boolean [] rec = new boolean [numCourses];
+        for(int e [] : prerequisites) {
+            indegree[e[0]]++;
+        }
 
+        int count = 0;
+        Queue<Integer> q = new LinkedList<>();
         for(int i=0 ; i<numCourses ; i++) {
-            if(!vis[i]) {
-                boolean check = dfs(i , vis , rec , adj);
-                if(check) return false;
+            if(indegree[i] == 0) {
+                q.add(i);
+                count++;
             }
         }
-        return true;
-    }
 
-    public boolean dfs(int curr , boolean [] vis , boolean [] rec , List<List<Integer>> adj) {
-        vis[curr] = true;
-        rec[curr] = true;
+        while(!q.isEmpty()) {
+            int curr = q.poll();
 
-        for(int neigh : adj.get(curr)) {
-            if(!vis[neigh]) {
-                if(dfs(neigh , vis , rec , adj)) return true;
-            }
-            else if(rec[neigh]) {
-                return true;
+            for(int neigh : adj.get(curr)) {
+                indegree[neigh]--;
+                if(indegree[neigh] == 0) {
+                    q.add(neigh);
+                    count++;
+                }
+                
             }
         }
-        rec[curr] = false;
-        return false;
+        return count == numCourses ? true : false;
     }
 
     public List<List<Integer>> create(int n , int [] [] edges ) {
