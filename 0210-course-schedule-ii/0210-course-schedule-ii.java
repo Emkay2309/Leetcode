@@ -3,11 +3,48 @@ class Solution {
         List<List<Integer>> adj  = create( numCourses , prerequisites);
         int n = numCourses;
 
-        int [] c1 = solve1( n , adj);
-        //int [] c2 = solve2( n , adj);
+        //int [] c1 = solve1( n , adj);
+        int [] c2 = bfs( n , adj , prerequisites);
 
-        return c1;
+        return c2;
     }
+
+    public int [] bfs(int n , List<List<Integer>> adj , int[][] mat) {
+        int [] indegree = new int [n];
+
+        for(int e [] : mat) {
+            indegree[e[0]]++;
+        }
+
+        Queue<Integer> q = new LinkedList<>();
+        for(int i=0; i<n ; i++) {
+            if(indegree[i] == 0) {
+                q.add(i);
+            }
+        }
+
+        List<Integer> ans = new ArrayList<>();
+
+        while(!q.isEmpty()) {
+            int curr = q.poll();
+            ans.add(curr);
+
+            for(int neigh : adj.get(curr)) {
+                indegree[neigh]--;
+                if(indegree[neigh] == 0) {
+                    q.add(neigh);
+                }
+            }
+        }
+
+        if(ans.size() != n) {
+            return new int [] {};
+        }
+
+        return ans.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+
 
     public int [] solve1(int n , List<List<Integer>> adj ) {
         boolean [] vis = new boolean [n];
@@ -33,7 +70,7 @@ class Solution {
     public boolean dfs(int curr , boolean [] vis , boolean [] rec , Stack<Integer> st , List<List<Integer>> adj) {
         vis[curr] = true;
         rec[curr] = true;
-        
+
         for(int neigh : adj.get(curr)) {
             if(!vis[neigh]) {
                 if(dfs(neigh , vis , rec , st , adj)) return true;
