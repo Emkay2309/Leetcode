@@ -1,39 +1,29 @@
+import java.util.function.Predicate;
+
 class Solution {
     public String reverseVowels(String s) {
         int n = s.length();
-        int i=0;
-        int j=n-1;
+        int i = 0, j = n - 1;
+        char[] arr = s.toCharArray();
+        String check = "aeiouAEIOU";
+        
+        Predicate<Character> isVowel = ch -> check.indexOf(ch) != -1;
 
-        char [] arr = s.toCharArray();
-
-        while(i <= j) {
+        while (i < j) {
             char start = arr[i];
             char end = arr[j];
 
-            if(!vowel(start)) {
+            if (!isVowel.test(start)) {
                 i++;
-            }
-            else if(!vowel(end)) {
+            } else if (!isVowel.test(end)) {
                 j--;
-            }
-            else {
-                //swap
+            } else {
                 arr[i] = end;
                 arr[j] = start;
                 i++;
                 j--;
             }
         }
-
         return new String(arr);
-    }
-
-    public boolean vowel(Character ch) {
-        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'
-            || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'
-        ) {
-            return true;
-        }
-        return false;
     }
 }
