@@ -1,34 +1,45 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> ans = new ArrayList<>();
-        dfs(nums , 0 , ans);
-        return ans;
+        List<List<Integer>> list = new ArrayList<>();
+        // Arrays.sort(nums); // not necessary
+        boolean [] vis = new boolean [nums.length];
+        //backtrack(list, new ArrayList<>(), nums);
+
+        solve(list , new ArrayList<>() , vis , nums);
+        return list;
     }
 
-    public void dfs(int [] nums , int start , List<List<Integer>> ans) {
-        //base case
-        List<Integer> temp = new ArrayList<>();
-        if(start >= nums.length) {
-            for(int a : nums) {
-                temp.add(a);
-            }
-            ans.add(temp);
+    void solve(List<List<Integer>> ans , List<Integer> curr , boolean [] vis , int [] arr) {
+        if(curr.size() == arr.length) {
+            ans.add(new ArrayList<>(curr));
             return;
         }
 
-        // generate per
-        for(int curr=start; curr<nums.length ; curr++) {
-            swap(start, curr, nums);
+        for(int i=0 ; i<arr.length ; i++) {
+            if(!vis[i]) {
+                vis[i] = true;
 
-            dfs(nums , start+1 , ans);
+                curr.add(arr[i]);
+                solve(ans , curr , vis , arr);
+                curr.remove(curr.size()-1);
 
-            swap(start , curr , nums);
+                vis[i] = false;
+            }  
         }
     }
 
-    public void swap(int a , int b , int [] nums) {
-        int temp = nums[a];
-        nums[a] = nums[b];
-        nums[b] = temp;
+    private void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums) {
+        if (tempList.size() == nums.length) {
+            list.add(new ArrayList<>(tempList));
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (tempList.contains(nums[i]))
+                continue; // element already exists, skip
+            tempList.add(nums[i]);
+            backtrack(list, tempList, nums);
+            tempList.remove(tempList.size() - 1);
+        }
+
     }
 }
