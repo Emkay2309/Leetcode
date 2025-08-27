@@ -1,31 +1,35 @@
 class Solution {
-    Boolean[][] memo;  // memo[i][j] stores result of s[i:], p[j:]
-
+    Boolean [][] dp;
     public boolean isMatch(String s, String p) {
-        memo = new Boolean[s.length() + 1][p.length() + 1];
-        return dfs(0, 0, s, p);
+        int n = s.length();
+        int m = p.length();
+        int i=0 , j=0;
+        dp = new Boolean [n+1][m+1];
+        return dfs(0 , 0 , n , m , s , p);
     }
 
-    private boolean dfs(int i, int j, String s, String p) {
-        // if we already computed this state
-        if (memo[i][j] != null) return memo[i][j];
+    public boolean dfs(int i , int j , int n , int m , String str , String pat) {
+        if(dp[i][j] != null) return dp[i][j];
 
         boolean ans;
 
-        if (j == p.length()) {
-            ans = (i == s.length()); // both must end
-        } else {
-            boolean firstMatch = (i < s.length() &&
-                    (s.charAt(i) == p.charAt(j) || p.charAt(j) == '.'));
+        if(j >= pat.length()) {
+            ans = (i == n);
+        }
+        else {
+            boolean isFirstCharSame = i<n && (str.charAt(i)==pat.charAt(j) || pat.charAt(j)=='.');
+            // * cases in if
+            if( j+1<m && pat.charAt(j+1) == '*') {
+                //use * or skip cases
+                boolean skip                  =   dfs(i , j+2 , n , m , str , pat);
+                boolean use = isFirstCharSame &&  dfs(i+1 , j , n , m , str , pat);
 
-            if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
-                // skip "x*" OR use "x*"
-                ans = dfs(i, j + 2, s, p) || (firstMatch && dfs(i + 1, j, s, p));
-            } else {
-                ans = firstMatch && dfs(i + 1, j + 1, s, p);
+                ans = skip || use;
+            }
+            else { // simple case
+                ans = isFirstCharSame && dfs(i+1 , j+1 , n , m , str , pat);
             }
         }
-
-        return memo[i][j] = ans;  // save result
+        return dp[i][j] = ans;
     }
 }
