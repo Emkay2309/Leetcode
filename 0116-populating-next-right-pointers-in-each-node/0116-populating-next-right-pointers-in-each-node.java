@@ -23,20 +23,21 @@ class Node {
 
 class Solution {
     public Node connect(Node root) {
+        if(root == null) return null;
         dfs(root);
         return root;
     }
 
-    private void dfs(Node node) {
-        if (node == null || node.left == null || node.right == null)    return;
+    public void dfs(Node root) {
+        if(root == null || root.left == null || root.right == null) return;
 
-        node.left.next = node.right;
+        root.left.next = root.right;
 
-        if (node.next != null) {
-            node.right.next = node.next.left;
+        if(root.next != null) {
+            root.right.next = root.next.left;
         }
 
-        dfs(node.left);
-        dfs(node.right);
+        dfs(root.left);
+        dfs(root.right);
     }
 }
