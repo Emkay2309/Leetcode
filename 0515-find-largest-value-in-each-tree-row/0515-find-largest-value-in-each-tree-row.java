@@ -16,27 +16,22 @@
 class Solution {
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        Queue<TreeNode> q = new LinkedList<>();
-        if(root == null) return ans;
-
-        q.offer(root);
-
-        while(!q.isEmpty()) {
-            int n = q.size();
-            int max = Integer.MIN_VALUE;
-            for(int i=1 ; i<=n ; i++) {
-                TreeNode curr = q.poll();
-                max = Math.max(max , curr.val);
-
-                if(curr.left != null) {
-                    q.offer(curr.left);
-                }
-                if(curr.right != null) {
-                    q.offer(curr.right);
-                }
-            }
-            ans.add(max);
-        }
+        dfs(root , 0 , ans);
         return ans;
+    }
+
+    public void dfs(TreeNode root , int level , List<Integer> ans) {
+        if(root == null) return;
+
+        if(level == ans.size()) {
+            ans.add(root.val);
+        }
+        else {
+            int prevMax = ans.get(level);
+            ans.set(level , Math.max(root.val , prevMax));
+        }
+
+        dfs(root.left , level+1 , ans);
+        dfs(root.right , level+1 , ans);
     }
 }
