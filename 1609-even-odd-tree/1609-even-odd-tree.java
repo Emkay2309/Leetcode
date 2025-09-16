@@ -16,37 +16,41 @@
 class Solution {
     public boolean isEvenOddTree(TreeNode root) {
         
-        int level = 1;
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
+        ArrayList<Integer> check = new ArrayList<>();
 
-        while(!q.isEmpty()) {
-            int n = q.size();
+        return dfs(0 , root , check);
+    }
 
-            int prev = (level % 2 == 1) ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+    public boolean dfs(int level , TreeNode root , ArrayList<Integer> check) {
+        if(root == null) return true;
 
-            for(int i=1 ; i<=n ; i++) {
-                TreeNode curr = q.poll();
+        if (level % 2 == 0 && root.val % 2 == 0) return false; 
+        if (level % 2 == 1 && root.val % 2 == 1) return false; 
 
-                if(level % 2 == 1) { //odd check increasing
-                    if(curr.val%2==0 || curr.val <= prev) {
-                        return false;
-                    }
+        if(level >= check.size() ) {
+            check.add(root.val);
+        }
+        else {
+            int prev = check.get(level);
+
+            if(level%2==0) { // check in odd cases
+                if(root.val <= prev) {
+                    return false;
                 }
-                else { // even check decreasing
-                    if(curr.val%2==1 || curr.val >= prev) {
-                        return false;
-                    }
+                else {
+                    check.set(level,root.val);
                 }
-
-                if(curr.left != null) q.add(curr.left);
-                if(curr.right != null) q.add(curr.right);
-                prev = curr.val;
-
             }
-            level++;
+            else { //check for even cases
+                if(root.val >= prev) {
+                    return false;
+                }
+                else {
+                    check.set(level,root.val);
+                }
+            }
         }
 
-        return true;
+        return dfs(level+1 , root.left , check) && dfs(level+1 , root.right , check);
     }
 }
