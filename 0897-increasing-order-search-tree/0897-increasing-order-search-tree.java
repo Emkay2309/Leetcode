@@ -14,33 +14,21 @@
  * }
  */
 class Solution {
-    ArrayList<Integer> ans ;
+    TreeNode curr;
     public TreeNode increasingBST(TreeNode root) {
-        ans = new ArrayList<>();
+        TreeNode dummy = new TreeNode(-1);
+        curr = dummy;
         dfs(root);
-
-        return createTree(ans);
-
-    }
-
-    public TreeNode createTree(ArrayList<Integer> ans) {
-        TreeNode root = new TreeNode(ans.get(0));
-        TreeNode dummy = root;
-        for(int i=1; i<ans.size() ; i++) {
-            TreeNode curr = new TreeNode(ans.get(i));
-            dummy.right = curr;
-            dummy.left = null;
-
-            dummy = curr;
-        }
-        return root;
+        return dummy.right;
     }
 
     public void dfs(TreeNode root) {
-        if(root==null) return;
+        if(root == null) return;
 
         dfs(root.left);
-        ans.add(root.val);
+        root.left = null;
+        curr.right = root;
+        curr = root;
         dfs(root.right);
     }
 }
