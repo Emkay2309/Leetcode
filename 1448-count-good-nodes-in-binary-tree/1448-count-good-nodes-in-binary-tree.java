@@ -56,17 +56,13 @@ class Solution {
 
     private int dfs(TreeNode root, int maxSoFar) {
         if (root == null) return 0; // base case
+        
+        // good node?
+        int count = root.val >= maxSoFar ?  1 : 0; 
 
-        int count = 0;
-        if (root.val >= maxSoFar) count = 1; // good node?
+        int left = dfs(root.left , Math.max(maxSoFar , root.val) );
+        int right = dfs(root.right ,  Math.max(maxSoFar , root.val) );
 
-        // update max value seen so far
-        maxSoFar = Math.max(maxSoFar, root.val);
-
-        // recurse left and right
-        count += dfs(root.left, maxSoFar);
-        count += dfs(root.right, maxSoFar);
-
-        return count;
+        return count+right+left;
     }
 }
