@@ -1,26 +1,28 @@
 class Solution {
-    private int getReqNum(long a, long b, long n) {
-        int gap = 0;
-        while (a <= n) {
-            gap += Math.min(n + 1, b) - a;
-            a *= 10;
-            b *= 10;
-        }
-        return gap;
-    }
+    int count = 0;   
+    int ans = -1;    
 
     public int findKthNumber(int n, int k) {
-        long num = 1;
-        for (int i = 1; i < k;) {
-            int req = getReqNum(num, num + 1, n);
-            if (i + req <= k) {
-                i += req;
-                num++;
-            } else {
-                i++;
-                num *= 10;
-            }
+        for (int i = 1; i <= 9; i++) {  
+            dfs(i, n, k);
+            if (ans != -1) break;     
         }
-        return (int) num;
+        return ans;
+    }
+
+    private void dfs(long num, int n, int k) {
+        if (num > n || ans != -1) return;
+
+        count++;
+
+        if (count == k) {
+            ans = (int) num;
+            return;
+        }
+
+        for (int i = 0; i <= 9; i++) {
+            dfs(num * 10 + i, n, k);
+            if (ans != -1) return;  
+        }
     }
 }
