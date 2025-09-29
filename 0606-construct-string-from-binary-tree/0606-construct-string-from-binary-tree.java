@@ -18,11 +18,11 @@ class Solution {
         if(root == null) return "";
 
         String curr = String.valueOf(root.val);
-        
+
         String left = tree2str(root.left);
         String right = tree2str(root.right);
 
-        if(root.left == null && root.right == null) {
+        if(root.left == null && root.right == null){
             return curr;
         }
         if(root.left == null) {
@@ -33,5 +33,6 @@ class Solution {
         }
 
         return curr + "(" + left + ")(" + right + ")"; 
+
     }
 }
