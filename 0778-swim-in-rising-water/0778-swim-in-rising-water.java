@@ -1,36 +1,25 @@
 class Solution {
     public int swimInWater(int[][] grid) {
-        int m = grid.length, n = grid[0].length;
-        List<int[]> edges = new ArrayList<>();
-        
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i > 0)
-                    edges.add(new int[]{Math.max(grid[i][j], grid[i-1][j]), i*n+j, (i-1)*n+j});
-                if (j > 0)
-                    edges.add(new int[]{Math.max(grid[i][j], grid[i][j-1]), i*n+j, i*n+j-1});
+        int n= grid.length;
+        int[][] dirs= {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        boolean[][] vis= new boolean[n][n];
+        PriorityQueue<int[]> pq= new PriorityQueue<>((a, b)-> a[0]-b[0]);
+        pq.add(new int[]{grid[0][0], 0 , 0});
+        vis[0][0]= true;
+        int res=0;
+        while(!pq.isEmpty()){
+            int[] cur= pq.poll();
+            int t= cur[0], r= cur[1], c= cur[2];
+            res= Math.max(res, t);
+            if(r==n-1 && c==n-1) return res;
+            for(int[] d: dirs){
+                int nr= r+d[0], nc= c+d[1];
+                if(nr>=0 && nr<n && nc>=0 && nc<n && !vis[nr][nc]){
+                    vis[nr][nc]= true;
+                    pq.add(new int[]{grid[nr][nc], nr, nc});
+                }
             }
         }
-        
-        Collections.sort(edges, (a, b) -> a[0] - b[0]);
-        int[] parent = new int[m * n];
-        for (int i = 0; i < m * n; i++) parent[i] = i;
-        
-        for (int[] edge : edges) {
-            union(parent, edge[1], edge[2]);
-            if (find(parent, 0) == find(parent, m*n-1))
-                return edge[0];
-        }
-        return grid[0][0];
-    }
-    
-    private int find(int[] parent, int x) {
-        if (parent[x] != x)
-            parent[x] = find(parent, parent[x]);
-        return parent[x];
-    }
-    
-    private void union(int[] parent, int x, int y) {
-        parent[find(parent, x)] = find(parent, y);
+        return res;
     }
 }
