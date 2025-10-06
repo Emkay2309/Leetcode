@@ -1,25 +1,44 @@
 class Solution {
     public int swimInWater(int[][] grid) {
-        int n= grid.length;
-        int[][] dirs= {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-        boolean[][] vis= new boolean[n][n];
-        PriorityQueue<int[]> pq= new PriorityQueue<>((a, b)-> a[0]-b[0]);
-        pq.add(new int[]{grid[0][0], 0 , 0});
-        vis[0][0]= true;
-        int res=0;
-        while(!pq.isEmpty()){
-            int[] cur= pq.poll();
-            int t= cur[0], r= cur[1], c= cur[2];
-            res= Math.max(res, t);
-            if(r==n-1 && c==n-1) return res;
-            for(int[] d: dirs){
-                int nr= r+d[0], nc= c+d[1];
-                if(nr>=0 && nr<n && nc>=0 && nc<n && !vis[nr][nc]){
-                    vis[nr][nc]= true;
-                    pq.add(new int[]{grid[nr][nc], nr, nc});
+        int n = grid.length;
+        
+        // Try all possible times from grid[0][0] to maximum elevation
+        for (int time = grid[0][0]; time <= n * n - 1; time++) {
+            boolean[][] visited = new boolean[n][n];
+            if (dfs(0, 0, grid, visited, time)) {
+                return time;
+            }
+        }
+        return n * n - 1;
+    }
+    
+    private boolean dfs(int r, int c, int[][] grid, boolean[][] visited, int time) {
+        int n = grid.length;
+        
+        // Base case: reached destination
+        if (r == n - 1 && c == n - 1) {
+            return true;
+        }
+        
+        visited[r][c] = true;
+        
+        // Directions: up, down, left, right
+        int[][] directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        
+        for (int[] dir : directions) {
+            int nr = r + dir[0];
+            int nc = c + dir[1];
+            
+            // Check if new position is valid and not visited
+            if (nr >= 0 && nr < n && nc >= 0 && nc < n && 
+                !visited[nr][nc] && grid[nr][nc] <= time) {
+                
+                if (dfs(nr, nc, grid, visited, time)) {
+                    return true;
                 }
             }
         }
-        return res;
+        
+        return false;
     }
 }
