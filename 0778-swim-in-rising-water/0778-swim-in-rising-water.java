@@ -1,44 +1,55 @@
+import java.util.*;
+
 class Solution {
+
+    int [][] dirs = {{-1,0}, {0,-1}, {1,0}, {0,1}};
+    
     public int swimInWater(int[][] grid) {
         int n = grid.length;
+        boolean[][] vis = new boolean[n][n];
+
+        PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.h));
         
-        // Try all possible times from grid[0][0] to maximum elevation
-        for (int time = grid[0][0]; time <= n * n - 1; time++) {
-            boolean[][] visited = new boolean[n][n];
-            if (dfs(0, 0, grid, visited, time)) {
-                return time;
-            }
-        }
-        return n * n - 1;
-    }
-    
-    private boolean dfs(int r, int c, int[][] grid, boolean[][] visited, int time) {
-        int n = grid.length;
+        pq.offer(new Pair(0, 0, grid[0][0]));
+        vis[0][0] = true;
         
-        // Base case: reached destination
-        if (r == n - 1 && c == n - 1) {
-            return true;
-        }
-        
-        visited[r][c] = true;
-        
-        // Directions: up, down, left, right
-        int[][] directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-        
-        for (int[] dir : directions) {
-            int nr = r + dir[0];
-            int nc = c + dir[1];
+        int ans = grid[0][0];
+
+        while(!pq.isEmpty()) {
+            Pair curr = pq.poll();
+            int row = curr.r;
+            int col = curr.c;
+            int height = curr.h;
             
-            // Check if new position is valid and not visited
-            if (nr >= 0 && nr < n && nc >= 0 && nc < n && 
-                !visited[nr][nc] && grid[nr][nc] <= time) {
+            // Update maxTime to the maximum elevation we've encountered so far
+            ans = Math.max(ans, height);
+            
+            // If we reached the destination
+            if(row == n-1 && col == n-1) {
+                return ans;
+            }
+
+            for(int [] d : dirs) {
+                int newRow = row + d[0];
+                int newCol = col + d[1];
                 
-                if (dfs(nr, nc, grid, visited, time)) {
-                    return true;
+                // Check bounds and if not visited
+                if(newRow >= 0 && newRow <= n-1 && newCol >= 0 && newCol <= n-1 && !vis[newRow][newCol]) {
+                    int h = grid[newRow][newCol];
+                    pq.offer(new Pair(newRow, newCol, h));
+                    vis[newRow][newCol] = true;
                 }
             }
         }
-        
-        return false;
+        return ans;
+    }
+}
+
+class Pair {
+    int r, c, h;
+    Pair(int r, int c, int h) {
+        this.r = r;
+        this.c = c;
+        this.h = h;
     }
 }
