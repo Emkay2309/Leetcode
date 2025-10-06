@@ -1,39 +1,36 @@
 class Solution {
     public int swimInWater(int[][] grid) {
         int m = grid.length, n = grid[0].length;
-        int[][] directions = {{0,1}, {1,0}, {0,-1}, {-1,0}};
+        List<int[]> edges = new ArrayList<>();
         
-        int lo = grid[0][0], hi = 0;
-        for (int[] row : grid)
-            for (int val : row)
-                hi = Math.max(hi, val);
-        
-        while (lo < hi) {
-            int mid = lo + (hi - lo) / 2;
-            if (possible(grid, mid, m, n, directions)) hi = mid;
-            else lo = mid + 1;
-        }
-        return lo;
-    }
-    
-    private boolean possible(int[][] grid, int mid, int m, int n, int[][] directions) {
-        if (grid[0][0] > mid) return false;
-        boolean[][] seen = new boolean[m][n];
-        return dfs(grid, 0, 0, mid, seen, m, n, directions);
-    }
-    
-    private boolean dfs(int[][] grid, int r, int c, int mid, boolean[][] seen, int m, int n, int[][] directions) {
-        if (r == m-1 && c == n-1) return true;
-        seen[r][c] = true;
-        
-        for (int[] dir : directions) {
-            int nr = r + dir[0], nc = c + dir[1];
-            if (nr >= 0 && nr < m && nc >= 0 && nc < n && !seen[nr][nc]) {
-                if (grid[nr][nc] <= mid) {
-                    if (dfs(grid, nr, nc, mid, seen, m, n, directions)) return true;
-                }
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i > 0)
+                    edges.add(new int[]{Math.max(grid[i][j], grid[i-1][j]), i*n+j, (i-1)*n+j});
+                if (j > 0)
+                    edges.add(new int[]{Math.max(grid[i][j], grid[i][j-1]), i*n+j, i*n+j-1});
             }
         }
-        return false;
+        
+        Collections.sort(edges, (a, b) -> a[0] - b[0]);
+        int[] parent = new int[m * n];
+        for (int i = 0; i < m * n; i++) parent[i] = i;
+        
+        for (int[] edge : edges) {
+            union(parent, edge[1], edge[2]);
+            if (find(parent, 0) == find(parent, m*n-1))
+                return edge[0];
+        }
+        return grid[0][0];
+    }
+    
+    private int find(int[] parent, int x) {
+        if (parent[x] != x)
+            parent[x] = find(parent, parent[x]);
+        return parent[x];
+    }
+    
+    private void union(int[] parent, int x, int y) {
+        parent[find(parent, x)] = find(parent, y);
     }
 }
