@@ -14,33 +14,33 @@
  * }
  */
 class Solution {
+    Map<Integer,Integer> map;
     public int maxLevelSum(TreeNode root) {
-        int max = Integer.MIN_VALUE;
-        int level = 0;
-        int ans = 0;
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
+        map = new HashMap<>();
+        dfs(root , 1);
 
-        while(!q.isEmpty()) {
-            int n = q.size();
-            int sum = 0;
-            level++;
-            while(n-->0) {
-                TreeNode curr = q.poll();
-                sum += curr.val;
+        int maxLevel = -1;
+        int maxSum = Integer.MIN_VALUE;
 
-                if(curr.left != null) {
-                    q.add(curr.left);
-                }
-                if(curr.right != null) {
-                    q.add(curr.right);
-                }
-            }
-            if(max < sum) {
-                max = sum;
-                ans = level;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            int level = entry.getKey();
+            int sum = entry.getValue();
+
+            if (sum > maxSum) {
+                maxSum = sum;
+                maxLevel = level;
             }
         }
-        return ans;
+
+        return maxLevel;
+    }
+
+    public void dfs(TreeNode root , int level) {
+        if(root == null) return;
+    
+        map.put(level , map.getOrDefault(level,0)+root.val);
+
+        dfs(root.left , level+1);
+        dfs(root.right , level+1);
     }
 }
