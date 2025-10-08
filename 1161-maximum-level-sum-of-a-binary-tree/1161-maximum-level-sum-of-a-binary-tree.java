@@ -17,27 +17,28 @@ class Solution {
     Map<Integer,Integer> map;
     public int maxLevelSum(TreeNode root) {
         map = new HashMap<>();
+
         dfs(root , 1);
 
-        int maxLevel = -1;
-        int maxSum = Integer.MIN_VALUE;
+        int ansLevel = -1;
+        int ansSum = Integer.MIN_VALUE;
 
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+
+        for(Map.Entry<Integer,Integer> entry : map.entrySet()) {
             int level = entry.getKey();
             int sum = entry.getValue();
 
-            if (sum > maxSum) {
-                maxSum = sum;
-                maxLevel = level;
+            if(sum > ansSum) {
+                ansSum = sum;
+                ansLevel = level;
             }
         }
-
-        return maxLevel;
+        return ansLevel;
     }
 
     public void dfs(TreeNode root , int level) {
         if(root == null) return;
-    
+
         map.put(level , map.getOrDefault(level,0)+root.val);
 
         dfs(root.left , level+1);
