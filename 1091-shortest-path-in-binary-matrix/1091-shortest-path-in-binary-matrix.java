@@ -1,34 +1,36 @@
 class Solution {
-
     public int shortestPathBinaryMatrix(int[][] grid) {
         int n = grid.length;
         if (grid[0][0] == 1 || grid[n - 1][n - 1] == 1) return -1;
 
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{0, 0});
-        grid[0][0] = 1; // mark visited
-        int ans = 1;
+        int[][] dist = new int[n][n];
+        for (int [] row : dist) Arrays.fill(row, Integer.MAX_VALUE);
 
-        while (!q.isEmpty()) {
-            int size = q.size();
-            for (int s = 0; s < size; s++) {
-                int[] curr = q.poll();
-                int i = curr[0], j = curr[1];
+        dist[0][0] = 1;
+        grid[0][0] = 1;
 
-                if (i == n - 1 && j == n - 1) return ans;
+        PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(a->a.d));
+        pq.offer(new Pair(0,0,0));
 
-                for (int[] d : dirs) {
-                    int nr = i + d[0];
-                    int nc = j + d[1];
+        while(!pq.isEmpty()) {
+            Pair curr = pq.poll();
+            int r = curr.r , c = curr.c , d = curr.d;
 
-                    if (isSafe(nr, nc, grid)) {
-                        q.offer(new int[]{nr, nc});
-                        grid[nr][nc] = 1; // mark visited
-                    }
+            if(r==n-1 && c==n-1) {
+                return d+1;
+            }
+
+            for(int [] dir : dirs) {
+                int nr = dir[0] + r , nc = dir[1] + c , nd = 1 + d;
+
+                if(isSafe(nr , nc , grid)) {
+                    pq.offer(new Pair(nr , nc , nd));
+                    grid[nr][nc] = 1;
+                    dist[nr][nc] = nd;
                 }
             }
-            ans++;
         }
+
         return -1;
     }
 
@@ -40,4 +42,13 @@ class Solution {
     int[][] dirs = {
                 {-1, -1}, {-1, 0}, {-1, 1},{0, -1},{0, 1},{1, -1},  {1, 0},  {1, 1}
             };
+}
+
+class Pair {
+    int r,d,c;
+    Pair(int r , int c , int d) {
+        this.r = r;
+        this.c = c;
+        this.d = d;
+    }
 }
