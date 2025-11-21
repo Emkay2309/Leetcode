@@ -12,7 +12,7 @@ class Solution {
             arr[i] = set.size();
         }
 
-        int ans = 0; // Final count of palindromic subsequences \U0001f4af
+        int ans = 0; // Final count of palindromic subsequences 
 
         // Loop through each unique character in the set
         for (char c : set) {
@@ -21,9 +21,9 @@ class Solution {
             for (int k = 0; k < s.length(); k++) {
                 if (s.charAt(k) == c) {
                     if (i == -1)
-                        i = k; // First occurrence \U0001f947
+                        i = k; // First occurrence 
                     else
-                        j = k; // Last occurrence \U0001f3c1
+                        j = k; // Last occurrence 
                 }
             }
 
@@ -32,13 +32,13 @@ class Solution {
                 HashSet<Character> between = new HashSet<>();
                 i++; // Move to the index after the first occurrence
                 while (i < j) {
-                    between.add(s.charAt(i)); // Add characters between \U0001f356
+                    between.add(s.charAt(i)); // Add characters between 
                     i++;
                 }
-                ans += between.size(); // Add the size of the set to the answer \U0001f389
+                ans += between.size(); // Add the size of the set to the answer 
             }
         }
 
-        return ans; // Return the final count \U0001f3c6
+        return ans; // Return the final count 
     }
 }
