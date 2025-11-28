@@ -1,40 +1,23 @@
 class Solution {
-    public int maxKDivisibleComponents(int n, int[][] edges, int[] vals, int k) {
-        if (n < 2) return 1;
-        
-        List<List<Integer>> graph = new ArrayList<>();
-        for (int i = 0; i < n; i++) graph.add(new ArrayList<>());
-        int[] degree = new int[n];
-        
-        for (int[] edge : edges) {
-            graph.get(edge[0]).add(edge[1]);
-            graph.get(edge[1]).add(edge[0]);
-            degree[edge[0]]++;
-            degree[edge[1]]++;
+    public int maxKDivisibleComponents(int n, int[][] edges, int[] values, int k) {
+        List<List<Integer>> adj = new ArrayList<>();
+        for(int i = 0; i < n; i++) adj.add(new ArrayList<>());
+        for(int [] i : edges) {
+            adj.get(i[0]).add(i[1]);
+            adj.get(i[1]).add(i[0]);
         }
-        
-        long [] nodeVals = new long[n];
-        for (int i = 0; i < n; i++) nodeVals[i] = vals[i];
-        Queue<Integer> leafQ = new LinkedList<>();
-        for (int i = 0; i < n; i++) if (degree[i] == 1) leafQ.add(i);
-        
-        int compCnt = 0;
-        while (!leafQ.isEmpty()) {
-            int curr = leafQ.poll();
-            degree[curr]--;
-            long carry = 0;
-            
-            if (nodeVals[curr] % k == 0) compCnt++;
-            else carry = nodeVals[curr];
-            
-            for (int nbr : graph.get(curr)) {
-                if (degree[nbr] == 0) continue;
-                degree[nbr]--;
-                nodeVals[nbr] += carry;
-                if (degree[nbr] == 1) leafQ.add(nbr);
+        int[] ans = new int[1];
+        dfs(adj,values,0,-1,ans,k);
+        return ans[0];
+    }
+    static int dfs(List<List<Integer>> adj, int[] values, int curr, int parent, int[] ans, int k) {
+        int sum = values[curr];
+        for(int neigh : adj.get(curr)) {
+            if(neigh != parent) {
+                sum += dfs(adj,values,neigh,curr,ans,k);
             }
         }
-        
-        return compCnt;
+        if(sum % k == 0) ans[0]++;
+        return sum % k;
     }
 }
