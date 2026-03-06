@@ -1,51 +1,53 @@
 class Solution {
     public String minWindow(String s, String t) {
-        if (s.isEmpty() || t.isEmpty()) {
-            return "";
+        int n = s.length();
+        int m = t.length();
+
+        if(m > n) return "";
+
+        int minSize = Integer.MAX_VALUE;
+        int left = 0 , right = 0 , start = 0 , count = t.length();
+
+        Map<Character , Integer> map = new HashMap<>();
+        for(char ch : t.toCharArray()) {
+            map.put( ch , map.getOrDefault(ch , 0)+1);
         }
 
-        Map<Character, Integer> dictT = new HashMap<>();
-        for (char c : t.toCharArray()) {
-            int count = dictT.getOrDefault(c, 0);
-            dictT.put(c, count + 1);
-        }
 
-        int required = dictT.size();
-        int l = 0, r = 0;
-        int formed = 0;
+        while( right < n) {
+            char curr = s.charAt(right);
 
-        Map<Character, Integer> windowCounts = new HashMap<>();
-        int[] ans = { -1, 0, 0 };
-
-        while (r < s.length()) {
-            char c = s.charAt(r);
-            int count = windowCounts.getOrDefault(c, 0);
-            windowCounts.put(c, count + 1);
-
-            if (dictT.containsKey(c) && windowCounts.get(c).intValue() == dictT.get(c).intValue()) {
-                formed++;
+            if(map.containsKey(curr) && map.get(curr) > 0) {
+                count--;
             }
 
-            while (l <= r && formed == required) {
-                c = s.charAt(l);
-
-                if (ans[0] == -1 || r - l + 1 < ans[0]) {
-                    ans[0] = r - l + 1;
-                    ans[1] = l;
-                    ans[2] = r;
-                }
-
-                windowCounts.put(c, windowCounts.get(c) - 1);
-                if (dictT.containsKey(c) && windowCounts.get(c).intValue() < dictT.get(c).intValue()) {
-                    formed--;
-                }
-
-                l++;
+            if(!map.containsKey(curr)) {
+                map.put(curr , -1);
+            }
+            else {
+                map.put( curr , map.get(curr)-1);
             }
 
-            r++;
-        }
+            //shrink
+            while(count == 0) {
+                int win = right-left+1;
+                if(win < minSize) {
+                    minSize = win;
+                    start = left;
+                }
 
-        return ans[0] == -1 ? "" : s.substring(ans[1], ans[2] + 1);
+                char remove = s.charAt(left);
+                map.put( remove , map.get(remove)+1);
+
+                if(map.get(remove) > 0) {
+                    count++;
+                }
+
+                left++;
+            }
+
+            right++;
+        }
+        return minSize == Integer.MAX_VALUE ? "" : s.substring(start, start + minSize);
     }
 }
