@@ -1,27 +1,27 @@
-import java.util.function.Predicate;
-
 class Solution {
     public String reverseVowels(String s) {
         int n = s.length();
-        int i = 0, j = n - 1;
-        char[] arr = s.toCharArray();
+        char [] arr = s.toCharArray();
+        int start = 0 , end = n-1;
         String check = "aeiouAEIOU";
-        
-        Predicate<Character> isVowel = ch -> check.indexOf(ch) != -1;
 
-        while (i < j) {
-            char start = arr[i];
-            char end = arr[j];
+        Predicate<Character> vowels = ch -> check.indexOf(ch) != -1;
 
-            if (!isVowel.test(start)) {
-                i++;
-            } else if (!isVowel.test(end)) {
-                j--;
-            } else {
-                arr[i] = end;
-                arr[j] = start;
-                i++;
-                j--;
+        while(start < end) {
+            char left = arr[start];
+            char right = arr[end];
+
+            if(!vowels.test(left)) {
+                start++;
+            }
+            else if(!vowels.test(right)) {
+                end--;
+            }
+            else {
+                arr[start] = right;
+                arr[end] = left;
+                start++;
+                end--;
             }
         }
         return new String(arr);
