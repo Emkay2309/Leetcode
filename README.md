@@ -44,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1622-fancy-sequence](https://github.com/Emkay2309/Leetcode/tree/main/1622-fancy-sequence/) | Hard |
+| [3783-mirror-distance-of-an-integer](https://github.com/Emkay2309/Leetcode/tree/main/3783-mirror-distance-of-an-integer/) | Easy |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
