@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/Emkay2309/Leetcode/tree/main/2033-minimum-operations-to-make-a-uni-value-grid/) | Medium |
 | [2906-construct-product-matrix](https://github.com/Emkay2309/Leetcode/tree/main/2906-construct-product-matrix/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/Emkay2309/Leetcode/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
+| [3742-maximum-path-score-in-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -27,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/Emkay2309/Leetcode/tree/main/2033-minimum-operations-to-make-a-uni-value-grid/) | Medium |
 | [2906-construct-product-matrix](https://github.com/Emkay2309/Leetcode/tree/main/2906-construct-product-matrix/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/Emkay2309/Leetcode/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
+| [3742-maximum-path-score-in-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -106,4 +108,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3742-maximum-path-score-in-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
 <!---LeetCode Topics End-->
