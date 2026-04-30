@@ -9,43 +9,34 @@ class Solution {
         int n = grid[0].length;
         this.memo = new Integer[m][n][k + 1];
         
-        int ans = dfs(m - 1, n - 1, k);
+        int ans = dfs(0, 0, k);
         return ans < 0 ? -1 : ans;
     }
     
-    private int dfs(int i, int j, int remK) {
-        // Invalid state: out of bounds or no more changes allowed
-        if (i < 0 || j < 0 || remK < 0) {
-            return -INF;
-        }
+    // Max score to reach (i,j) from (0,0) with exactly 'used' changes so far
+    private int dfs(int i, int j, int used) {
+        if (used > k) return -INF;
         
-        // Base case: start position
         if (i == 0 && j == 0) {
-            return 0;
+            return grid[0][0];
         }
         
-        // Memo check
-        if (memo[i][j][remK] != null) {
-            return memo[i][j][remK];
+        if (memo[i][j][used] != null) return memo[i][j][used];
+        
+        int cost = (grid[i][j] == 0 ? 0 : 1);
+        
+        int maxScore = -INF;
+        // From up
+        if (i > 0) {
+            int prev = dfs(i - 1, j, used - cost);
+            if (prev != -INF) maxScore = Math.max(maxScore, prev + grid[i][j]);
+        }
+        // From left
+        if (j > 0) {
+            int prev = dfs(i, j - 1, used - cost);
+            if (prev != -INF) maxScore = Math.max(maxScore, prev + grid[i][j]);
         }
         
-        // Consume cost if cell > 0
-        int currK = remK;
-        if (grid[i][j] > 0) {
-            currK--;
-        }
-        
-        // Recur from up and left (paths come from there)
-        int fromUp = dfs(i - 1, j, currK);
-        int fromLeft = dfs(i, j - 1, currK);
-        int maxPrev = Math.max(fromUp, fromLeft);
-        
-        // If no valid path from previous, invalid
-        if (maxPrev == -INF) {
-            return memo[i][j][remK] = -INF;
-        }
-        
-        // Add current cell value
-        return memo[i][j][remK] = grid[i][j] + maxPrev;
+        return memo[i][j][used] = maxScore;
     }
 }
