@@ -1,16 +1,23 @@
 class Solution {
     public int maxRotateFunction(int[] nums) {
-        int f = 0;
         int n = nums.length;
-        int numSum = Arrays.stream(nums).sum();
+        
+        int sum = 0, f = 0;
+        
+        // Step 1: calculate sum and F(0)
         for (int i = 0; i < n; i++) {
-            f += (i * nums[i]);
+            sum += nums[i];
+            f += i * nums[i];
         }
-        int res = f;
+        
+        int max = f;
+        
+        // Step 2: use relation to compute next rotations
         for (int i = n - 1; i > 0; i--) {
-            f += numSum - n * nums[i];
-            res = Math.max(res, f);
+            f = f + sum - n * nums[i];
+            max = Math.max(max, f);
         }
-        return res;
+        
+        return max;
     }
 }
