@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0048-rotate-image](https://github.com/Emkay2309/Leetcode/tree/main/0048-rotate-image/) | Medium |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Emkay2309/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
@@ -23,6 +24,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0048-rotate-image](https://github.com/Emkay2309/Leetcode/tree/main/0048-rotate-image/) | Medium |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Emkay2309/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Emkay2309/Leetcode/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
@@ -54,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0048-rotate-image](https://github.com/Emkay2309/Leetcode/tree/main/0048-rotate-image/) | Medium |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [0788-rotated-digits](https://github.com/Emkay2309/Leetcode/tree/main/0788-rotated-digits/) | Medium |
 | [1622-fancy-sequence](https://github.com/Emkay2309/Leetcode/tree/main/1622-fancy-sequence/) | Hard |
