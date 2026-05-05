@@ -1,39 +1,33 @@
 class Solution {
     public ListNode rotateRight(ListNode head, int k) {
-        if (head == null || head.next == null || k == 0) return head;
+        if (head == null || head.next == null) return head;
         
         // Find length
-        int length = getLength(head, 1);
+        int length = 1;
+        ListNode tail = head;
+        while (tail.next != null) {
+            tail = tail.next;
+            length++;
+        }
         
-        // Optimize k
         k = k % length;
         if (k == 0) return head;
         
-        // Find the node where we need to cut
-        int cutAt = length - k;
-        return rotateRecursive(head, cutAt);
-    }
-    
-    private ListNode rotateRecursive(ListNode node, int steps) {
-        // Base case: reached the node to cut
-        if (steps == 1) {
-            ListNode newHead = node.next;
-            node.next = null;
-            
-            // Find the tail of the new list to connect original head
-            ListNode tail = newHead;
-            while (tail.next != null) {
-                tail = tail.next;
-            }
-            tail.next = node;
-            return newHead;
-        }
+        // Make it circular
+        tail.next = head;
         
-        return rotateRecursive(node.next, steps - 1);
+        // Find new tail: (length - k) steps from head
+        int stepsToNewTail = length - k;
+        ListNode newTail = findNewTail(head, stepsToNewTail);
+        
+        ListNode newHead = newTail.next;
+        newTail.next = null;
+        
+        return newHead;
     }
     
-    private int getLength(ListNode node, int count) {
-        if (node.next == null) return count;
-        return getLength(node.next, count + 1);
+    private ListNode findNewTail(ListNode node, int steps) {
+        if (steps == 1) return node;
+        return findNewTail(node.next, steps - 1);
     }
 }
