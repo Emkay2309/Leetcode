@@ -17,9 +17,8 @@ class Solution {
         
         ListNode curr = head;
         int steps = length - k;
-        
-        // Using while loop as you prefer
-        while(steps > 1) {  // Changed condition to prevent null
+
+        while(steps > 1) { 
             curr = curr.next;
             steps--;
         }
@@ -28,7 +27,6 @@ class Solution {
         curr.next = null;
         
         ListNode tail = newHead;
-        // Added null check to prevent NPE
         while(tail != null && tail.next != null) {
             tail = tail.next;
         }
