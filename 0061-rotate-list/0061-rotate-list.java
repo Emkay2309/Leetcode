@@ -1,56 +1,39 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
 class Solution {
     public ListNode rotateRight(ListNode head, int k) {
-        if(head == null) return null;
-        int length = countNodes(head);  
-        k = k % length; 
-        if(k == 0) return head;
+        if (head == null || head.next == null || k == 0) return head;
         
-        ListNode curr = head;
-        int steps = length - k;
-
-        while(steps > 1) { 
-            curr = curr.next;
-            steps--;
-        }
+        // Find length
+        int length = getLength(head, 1);
         
-        ListNode newHead = curr.next;
-        curr.next = null;
+        // Optimize k
+        k = k % length;
+        if (k == 0) return head;
         
-        ListNode tail = newHead;
-        while(tail != null && tail.next != null) {
-            tail = tail.next;
-        }
-        
-        if(tail != null) {
-            tail.next = head;
-        }
-        
-        return newHead;
+        // Find the node where we need to cut
+        int cutAt = length - k;
+        return rotateRecursive(head, cutAt);
     }
     
-    public int countNodes(ListNode head) {
-        ListNode fast = head;
-        int count = 0;
-        
-        while(fast != null && fast.next != null) {
-            fast = fast.next.next;
-            count += 2;
+    private ListNode rotateRecursive(ListNode node, int steps) {
+        // Base case: reached the node to cut
+        if (steps == 1) {
+            ListNode newHead = node.next;
+            node.next = null;
+            
+            // Find the tail of the new list to connect original head
+            ListNode tail = newHead;
+            while (tail.next != null) {
+                tail = tail.next;
+            }
+            tail.next = node;
+            return newHead;
         }
         
-        if(fast != null) {
-            count++;
-        }
-        
-        return count;
+        return rotateRecursive(node.next, steps - 1);
+    }
+    
+    private int getLength(ListNode node, int count) {
+        if (node.next == null) return count;
+        return getLength(node.next, count + 1);
     }
 }
