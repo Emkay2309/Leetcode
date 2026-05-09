@@ -45,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
 | [0345-reverse-vowels-of-a-string](https://github.com/Emkay2309/Leetcode/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
+| [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0796-rotate-string](https://github.com/Emkay2309/Leetcode/tree/main/0796-rotate-string/) | Easy |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/Emkay2309/Leetcode/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
 ## Sliding Window
@@ -69,6 +70,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [1622-fancy-sequence](https://github.com/Emkay2309/Leetcode/tree/main/1622-fancy-sequence/) | Hard |
 ## Segment Tree
 | Problem Name | Difficulty |
@@ -96,15 +98,18 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
+| [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 ## Stack
@@ -115,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
+| [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -138,4 +144,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1914-cyclically-rotating-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/1914-cyclically-rotating-a-grid/) | Medium |
+## Binary Search Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 <!---LeetCode Topics End-->
