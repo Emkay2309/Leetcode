@@ -41,11 +41,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0012-integer-to-roman](https://github.com/Emkay2309/Leetcode/tree/main/0012-integer-to-roman/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0006-zigzag-conversion](https://github.com/Emkay2309/Leetcode/tree/main/0006-zigzag-conversion/) | Medium |
+| [0012-integer-to-roman](https://github.com/Emkay2309/Leetcode/tree/main/0012-integer-to-roman/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
 | [0345-reverse-vowels-of-a-string](https://github.com/Emkay2309/Leetcode/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
@@ -65,6 +67,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0012-integer-to-roman](https://github.com/Emkay2309/Leetcode/tree/main/0012-integer-to-roman/) | Medium |
 | [0048-rotate-image](https://github.com/Emkay2309/Leetcode/tree/main/0048-rotate-image/) | Medium |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [0788-rotated-digits](https://github.com/Emkay2309/Leetcode/tree/main/0788-rotated-digits/) | Medium |
