@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Emkay2309/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/Emkay2309/Leetcode/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
+| [1674-minimum-moves-to-make-array-complementary](https://github.com/Emkay2309/Leetcode/tree/main/1674-minimum-moves-to-make-array-complementary/) | Medium |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Emkay2309/Leetcode/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/Emkay2309/Leetcode/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [1914-cyclically-rotating-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/1914-cyclically-rotating-a-grid/) | Medium |
@@ -45,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0012-integer-to-roman](https://github.com/Emkay2309/Leetcode/tree/main/0012-integer-to-roman/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
+| [1674-minimum-moves-to-make-array-complementary](https://github.com/Emkay2309/Leetcode/tree/main/1674-minimum-moves-to-make-array-complementary/) | Medium |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -94,6 +96,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Prefix Sum
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1674-minimum-moves-to-make-array-complementary](https://github.com/Emkay2309/Leetcode/tree/main/1674-minimum-moves-to-make-array-complementary/) | Medium |
 | [2906-construct-product-matrix](https://github.com/Emkay2309/Leetcode/tree/main/2906-construct-product-matrix/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/Emkay2309/Leetcode/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 ## Enumeration
