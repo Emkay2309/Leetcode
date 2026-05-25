@@ -69,10 +69,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0796-rotate-string](https://github.com/Emkay2309/Leetcode/tree/main/0796-rotate-string/) | Easy |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/Emkay2309/Leetcode/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
+| [1871-jump-game-vii](https://github.com/Emkay2309/Leetcode/tree/main/1871-jump-game-vii/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
+| [1871-jump-game-vii](https://github.com/Emkay2309/Leetcode/tree/main/1871-jump-game-vii/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -110,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1674-minimum-moves-to-make-array-complementary](https://github.com/Emkay2309/Leetcode/tree/main/1674-minimum-moves-to-make-array-complementary/) | Medium |
+| [1871-jump-game-vii](https://github.com/Emkay2309/Leetcode/tree/main/1871-jump-game-vii/) | Medium |
 | [2906-construct-product-matrix](https://github.com/Emkay2309/Leetcode/tree/main/2906-construct-product-matrix/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/Emkay2309/Leetcode/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 ## Enumeration
@@ -170,6 +173,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [0788-rotated-digits](https://github.com/Emkay2309/Leetcode/tree/main/0788-rotated-digits/) | Medium |
+| [1871-jump-game-vii](https://github.com/Emkay2309/Leetcode/tree/main/1871-jump-game-vii/) | Medium |
 | [2770-maximum-number-of-jumps-to-reach-the-last-index](https://github.com/Emkay2309/Leetcode/tree/main/2770-maximum-number-of-jumps-to-reach-the-last-index/) | Medium |
 | [3660-jump-game-ix](https://github.com/Emkay2309/Leetcode/tree/main/3660-jump-game-ix/) | Medium |
 | [3742-maximum-path-score-in-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
