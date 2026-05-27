@@ -1,26 +1,31 @@
 class Solution {
     public int numberOfSpecialChars(String word) {
-        int[] mpl = new int[26];
-        int[] mpu = new int[26];
-        java.util.Arrays.fill(mpl, -1) ;
-        java.util.Arrays.fill(mpu, -1);
+        int[] lower = new int[26];
+        int[] upper = new int[26];
 
-        int n = word.length();
-        for (int i = 0; i < n; i++) {
-            char a = word.charAt(i);
-            if (Character.isLowerCase(a)) {
-                mpl[a - 'a'] = i ;
-            } else {
-                int idx = a - 'A';
-                if (mpu[idx] == -1)
-                    mpu[idx] = i;
+        Arrays.fill(lower, -1);
+        Arrays.fill(upper, -1);
+
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+
+            if (Character.isLowerCase(ch)) {
+                lower[ch - 'a'] = i;
+            } else if (upper[ch - 'A'] == -1) {
+                upper[ch - 'A'] = i;
             }
         }
+
         int ans = 0;
+
         for (int i = 0; i < 26; i++) {
-            if (mpl[i] != -1 && mpu[i] != -1 && mpl[i] < mpu[i])
-                ans++ ;
+            if (lower[i] != -1 &&
+                upper[i] != -1 &&
+                lower[i] < upper[i]) {
+                ans++;
+            }
         }
+
         return ans;
     }
 }
