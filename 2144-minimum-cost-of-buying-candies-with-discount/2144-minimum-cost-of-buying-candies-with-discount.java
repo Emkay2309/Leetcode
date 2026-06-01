@@ -1,13 +1,25 @@
 class Solution {
     public int minimumCost(int[] cost) {
-        Arrays.sort(cost);
-        int res = 0;
-        int n = cost.length;
-        for (int i = n - 1; i >= 0; --i) {
-            if ((n - 1 - i) % 3 != 2) {
-                res += cost[i];
+        int[] freq = new int[101];
+        for (int c : cost) {
+            freq[c]++;
+        }
+        
+        int total = 0;
+        int count = 0;
+        
+        for (int i = 100; i >= 1; i--) {
+            while (freq[i] > 0) {
+                if (count == 2) {
+                    count = 0;
+                } else {
+                    total += i;
+                    count++;
+                }
+                freq[i]--;
             }
         }
-        return res;
+        
+        return total;
     }
 }
