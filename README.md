@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0048-rotate-image](https://github.com/Emkay2309/Leetcode/tree/main/0048-rotate-image/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/Emkay2309/Leetcode/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
+| [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Emkay2309/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
@@ -67,6 +68,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0012-integer-to-roman](https://github.com/Emkay2309/Leetcode/tree/main/0012-integer-to-roman/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
+| [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
 | [1674-minimum-moves-to-make-array-complementary](https://github.com/Emkay2309/Leetcode/tree/main/1674-minimum-moves-to-make-array-complementary/) | Medium |
 | [2540-minimum-common-value](https://github.com/Emkay2309/Leetcode/tree/main/2540-minimum-common-value/) | Easy |
@@ -98,6 +100,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/Emkay2309/Leetcode/tree/main/0061-rotate-list/) | Medium |
 | [0345-reverse-vowels-of-a-string](https://github.com/Emkay2309/Leetcode/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
+| [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/Emkay2309/Leetcode/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/Emkay2309/Leetcode/tree/main/2095-delete-the-middle-node-of-a-linked-list/) | Medium |
 | [2161-partition-array-according-to-given-pivot](https://github.com/Emkay2309/Leetcode/tree/main/2161-partition-array-according-to-given-pivot/) | Medium |
@@ -128,6 +131,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/Emkay2309/Leetcode/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Emkay2309/Leetcode/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1833-maximum-ice-cream-bars](https://github.com/Emkay2309/Leetcode/tree/main/1833-maximum-ice-cream-bars/) | Medium |
@@ -154,6 +158,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/Emkay2309/Leetcode/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/Emkay2309/Leetcode/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
+| [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/Emkay2309/Leetcode/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [2540-minimum-common-value](https://github.com/Emkay2309/Leetcode/tree/main/2540-minimum-common-value/) | Easy |
 | [3633-earliest-finish-time-for-land-and-water-rides-i](https://github.com/Emkay2309/Leetcode/tree/main/3633-earliest-finish-time-for-land-and-water-rides-i/) | Easy |
