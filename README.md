@@ -40,6 +40,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3660-jump-game-ix](https://github.com/Emkay2309/Leetcode/tree/main/3660-jump-game-ix/) | Medium |
 | [3689-maximum-total-subarray-value-i](https://github.com/Emkay2309/Leetcode/tree/main/3689-maximum-total-subarray-value-i/) | Medium |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Emkay2309/Leetcode/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/Emkay2309/Leetcode/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 | [3742-maximum-path-score-in-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
@@ -77,6 +78,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2784-check-if-array-is-good](https://github.com/Emkay2309/Leetcode/tree/main/2784-check-if-array-is-good/) | Easy |
 | [3121-count-the-number-of-special-characters-ii](https://github.com/Emkay2309/Leetcode/tree/main/3121-count-the-number-of-special-characters-ii/) | Medium |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Emkay2309/Leetcode/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/Emkay2309/Leetcode/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -131,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [1622-fancy-sequence](https://github.com/Emkay2309/Leetcode/tree/main/1622-fancy-sequence/) | Hard |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Emkay2309/Leetcode/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/Emkay2309/Leetcode/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -153,6 +156,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2906-construct-product-matrix](https://github.com/Emkay2309/Leetcode/tree/main/2906-construct-product-matrix/) | Medium |
 | [3546-equal-sum-grid-partition-i](https://github.com/Emkay2309/Leetcode/tree/main/3546-equal-sum-grid-partition-i/) | Medium |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Emkay2309/Leetcode/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/Emkay2309/Leetcode/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Enumeration
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -245,6 +249,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Emkay2309/Leetcode/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/Emkay2309/Leetcode/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -262,4 +267,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/Emkay2309/Leetcode/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/Emkay2309/Leetcode/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 <!---LeetCode Topics End-->
