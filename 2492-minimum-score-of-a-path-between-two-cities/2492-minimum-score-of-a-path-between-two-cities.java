@@ -1,54 +1,55 @@
 class Solution {
-    int ans = Integer.MAX_VALUE;
-    public int minScore(int n, int[][] roads) {
+    int ans = Integer.MAX_VALUE; // Global variable to track the minimum score
 
-        boolean [] vis = new boolean [n];
+    public int minScore(int n, int[][] roads) {
+        boolean[] vis = new boolean[n + 1]; // Adjust size for 1-based indexing
         List<List<Pair>> adj = new ArrayList<>();
-        for(int i=0 ; i<n ; i++) {
+
+        // Initialize adjacency list
+        for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
 
-        for(int [] road : roads) {
+        // Construct the graph (1-based indexing)
+        for (int[] road : roads) {
             int sv = road[0];
             int ev = road[1];
             int wt = road[2];
 
-            adj.get(sv-1).add(new Pair(ev-1 , wt));
-            adj.get(ev-1).add(new Pair(sv-1 , wt));
-        }
-        ans = Integer.MAX_VALUE;
-        
-        for(int i=0; i<n ; i++) {
-            if(!vis[i]) {
-                dfs(i  ,  vis , adj );
-            }
+            adj.get(sv).add(new Pair(ev, wt));
+            adj.get(ev).add(new Pair(sv, wt));
         }
 
+        // Start DFS from city 1
+        dfs(1, vis, adj);
 
         return ans;
     }
 
-    public void dfs(int curr , boolean [] vis , List<List<Pair>> adj) {
+    public void dfs(int curr, boolean[] vis, List<List<Pair>> adj) {
         vis[curr] = true;
 
-        for(Pair neigh : adj.get(curr)) {
+        for (Pair neigh : adj.get(curr)) {
             int node = neigh.node;
             int wt = neigh.wt;
 
-            ans = Math.min(ans , wt);
+            // Update the minimum score (ans)
+            ans = Math.min(ans, wt);
 
-            if(!vis[node]) {
-                dfs(node  , vis , adj );
+            // Visit the neighbor if not already visited
+            if (!vis[node]) {
+                dfs(node, vis, adj);
             }
         }
     }
-}
 
-class Pair{
-    int node;
-    int wt;
-    Pair(int node , int wt) {
-        this.node = node;
-        this.wt = wt;
+    class Pair {
+        int node;
+        int wt;
+
+        Pair(int node, int wt) {
+            this.node = node;
+            this.wt = wt;
+        }
     }
 }
