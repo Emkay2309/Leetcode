@@ -1,80 +1,37 @@
-import java.util.*;
-
 class Solution {
+    void dfs(int u, List<List<Integer>> adj, boolean[] vis, List<Integer> comp) {
+        vis[u] = true;
+        comp.add(u);
+        for (int v : adj.get(u))
+            if (!vis[v]) dfs(v, adj, vis, comp);
+    }
+
     public int countCompleteComponents(int n, int[][] edges) {
-        // Initialize DSU
-        int[] parent = new int[n];
-        int[] size = new int[n];
-        
-        for (int i = 0; i < n; i++) {
-            parent[i] = i;
-            size[i] = 1;
-        }
-        
-        // Find function with path compression
-        class DSUHelper {
-            int find(int x) {
-                if (parent[x] != x) {
-                    parent[x] = find(parent[x]);
-                }
-                return parent[x];
-            }
-            
-            void union(int x, int y) {
-                int rootX = find(x);
-                int rootY = find(y);
-                
-                if (rootX == rootY) return;
-                
-                if (size[rootX] < size[rootY]) {
-                    int temp = rootX;
-                    rootX = rootY;
-                    rootY = temp;
-                }
-                
-                parent[rootY] = rootX;
-                size[rootX] += size[rootY];
-            }
-        }
-        
-        DSUHelper dsu = new DSUHelper();
-        int[] degree = new int[n];
-        
-        // Process edges
+        List<List<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < n; i++) adj.add(new ArrayList<>());
         for (int[] e : edges) {
-            dsu.union(e[0], e[1]);
-            degree[e[0]]++;
-            degree[e[1]]++;
+            adj.get(e[0]).add(e[1]);
+            adj.get(e[1]).add(e[0]);
         }
-        
-        // Group nodes by root
-        Map<Integer, List<Integer>> groups = new HashMap<>();
+
+        boolean[] vis = new boolean[n];
+        int ans = 0;
+
         for (int i = 0; i < n; i++) {
-            int root = dsu.find(i);
-            groups.computeIfAbsent(root, k -> new ArrayList<>()).add(i);
-        }
-        
-        int completeComponents = 0;
-        
-        // Check each group
-        for (Map.Entry<Integer, List<Integer>> entry : groups.entrySet()) {
-            int root = entry.getKey();
-            List<Integer> nodes = entry.getValue();
-            int componentSize = size[root];
-            
-            boolean isComplete = true;
-            for (int node : nodes) {
-                if (degree[node] != componentSize - 1) {
-                    isComplete = false;
-                    break;
+            if (!vis[i]) {
+                List<Integer> comp = new ArrayList<>();
+                dfs(i, adj, vis, comp);
+
+                boolean isComplete = true;
+                for (int u : comp) {
+                    if (adj.get(u).size() != comp.size() - 1) {
+                        isComplete = false;
+                        break;
+                    }
                 }
-            }
-            
-            if (isComplete) {
-                completeComponents++;
+                if (isComplete) ans++;
             }
         }
-        
-        return completeComponents;
+        return ans;
     }
 }
