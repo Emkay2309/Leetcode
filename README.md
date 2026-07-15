@@ -126,6 +126,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1622-fancy-sequence](https://github.com/Emkay2309/Leetcode/tree/main/1622-fancy-sequence/) | Hard |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/Emkay2309/Leetcode/tree/main/2033-minimum-operations-to-make-a-uni-value-grid/) | Medium |
 | [3300-minimum-element-after-replacement-with-digit-sum](https://github.com/Emkay2309/Leetcode/tree/main/3300-minimum-element-after-replacement-with-digit-sum/) | Easy |
+| [3658-gcd-of-odd-and-even-sums](https://github.com/Emkay2309/Leetcode/tree/main/3658-gcd-of-odd-and-even-sums/) | Easy |
 | [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/Emkay2309/Leetcode/tree/main/3754-concatenate-non-zero-digits-and-multiply-by-sum-i/) | Easy |
 | [3783-mirror-distance-of-an-integer](https://github.com/Emkay2309/Leetcode/tree/main/3783-mirror-distance-of-an-integer/) | Easy |
 ## Design
@@ -298,4 +299,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
+## Number Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3658-gcd-of-odd-and-even-sums](https://github.com/Emkay2309/Leetcode/tree/main/3658-gcd-of-odd-and-even-sums/) | Easy |
 <!---LeetCode Topics End-->
