@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
+| [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Emkay2309/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
@@ -127,6 +128,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0048-rotate-image](https://github.com/Emkay2309/Leetcode/tree/main/0048-rotate-image/) | Medium |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [0788-rotated-digits](https://github.com/Emkay2309/Leetcode/tree/main/0788-rotated-digits/) | Medium |
+| [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 | [1344-angle-between-hands-of-a-clock](https://github.com/Emkay2309/Leetcode/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 | [1622-fancy-sequence](https://github.com/Emkay2309/Leetcode/tree/main/1622-fancy-sequence/) | Hard |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Emkay2309/Leetcode/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
@@ -246,6 +248,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [0788-rotated-digits](https://github.com/Emkay2309/Leetcode/tree/main/0788-rotated-digits/) | Medium |
+| [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 | [1871-jump-game-vii](https://github.com/Emkay2309/Leetcode/tree/main/1871-jump-game-vii/) | Medium |
 | [2770-maximum-number-of-jumps-to-reach-the-last-index](https://github.com/Emkay2309/Leetcode/tree/main/2770-maximum-number-of-jumps-to-reach-the-last-index/) | Medium |
 | [3660-jump-game-ix](https://github.com/Emkay2309/Leetcode/tree/main/3660-jump-game-ix/) | Medium |
@@ -319,4 +322,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Emkay2309/Leetcode/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/Emkay2309/Leetcode/tree/main/3658-gcd-of-odd-and-even-sums/) | Easy |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/Emkay2309/Leetcode/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
+## Game Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 <!---LeetCode Topics End-->
