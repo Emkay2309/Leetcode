@@ -347,6 +347,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Minimax
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 | [1510-stone-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1510-stone-game-iv/) | Hard |
 | [2029-stone-game-ix](https://github.com/Emkay2309/Leetcode/tree/main/2029-stone-game-ix/) | Medium |
 ## Nim Game
@@ -361,6 +362,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Zero-Sum Game
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 | [1510-stone-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1510-stone-game-iv/) | Hard |
 | [2029-stone-game-ix](https://github.com/Emkay2309/Leetcode/tree/main/2029-stone-game-ix/) | Medium |
 <!---LeetCode Topics End-->
