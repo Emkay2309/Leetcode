@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/Emkay2309/Leetcode/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
+| [0628-maximum-product-of-three-numbers](https://github.com/Emkay2309/Leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
 | [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
@@ -135,6 +136,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0012-integer-to-roman](https://github.com/Emkay2309/Leetcode/tree/main/0012-integer-to-roman/) | Medium |
 | [0048-rotate-image](https://github.com/Emkay2309/Leetcode/tree/main/0048-rotate-image/) | Medium |
 | [0396-rotate-function](https://github.com/Emkay2309/Leetcode/tree/main/0396-rotate-function/) | Medium |
+| [0628-maximum-product-of-three-numbers](https://github.com/Emkay2309/Leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0788-rotated-digits](https://github.com/Emkay2309/Leetcode/tree/main/0788-rotated-digits/) | Medium |
 | [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
 | [1344-angle-between-hands-of-a-clock](https://github.com/Emkay2309/Leetcode/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
@@ -164,6 +166,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0049-group-anagrams](https://github.com/Emkay2309/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
+| [0628-maximum-product-of-three-numbers](https://github.com/Emkay2309/Leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/Emkay2309/Leetcode/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Emkay2309/Leetcode/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
