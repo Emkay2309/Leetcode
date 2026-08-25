@@ -1,25 +1,18 @@
 class Solution {
     public int missingMultiple(int[] nums, int k) {
-        Arrays.sort(nums);
+        int max = 0;
+        for (int num : nums) {
+            max = Math.max(max, num);
+        }
+        
+        boolean[] present = new boolean[max + k + 1]; 
+        for (int num : nums) {
+            present[num] = true;
+        }
         
         int multiple = k;
-        int index = 0;
-        
-
-        while (index < nums.length) {
-            if (nums[index] == multiple) {
-                multiple += k;
-
-                while (index < nums.length && nums[index] == multiple - k) {
-                    index++;
-                }
-            } 
-            else if (nums[index] < multiple) {
-                index++;
-            } 
-            else {
-                return multiple;
-            }
+        while (multiple < present.length && present[multiple]) {
+            multiple += k;
         }
         
         return multiple;
