@@ -1,33 +1,46 @@
 class Solution {
+
     public ListNode rotateRight(ListNode head, int k) {
+
         if (head == null || head.next == null) return head;
         
-        // Find length
-        int length = 1;
-        ListNode tail = head;
-        while (tail.next != null) {
-            tail = tail.next;
-            length++;
-        }
-        
+        int length = count(head);
         k = k % length;
+
         if (k == 0) return head;
         
-        // Make it circular
+        ListNode tail = head;
+
+        while (tail.next != null) {
+            tail = tail.next;
+        }
+
+        // Make circle
         tail.next = head;
-        
-        // Find new tail: (length - k) steps from head
-        int stepsToNewTail = length - k;
-        ListNode newTail = findNewTail(head, stepsToNewTail);
-        
+
+        // Find new tail
+        int steps = length - k - 1;
+        ListNode newTail = head;
+
+        while (steps-- > 0) {
+            newTail = newTail.next;
+        }
+
+        // New head
         ListNode newHead = newTail.next;
+
+        // Break circle
         newTail.next = null;
-        
+
         return newHead;
     }
-    
-    private ListNode findNewTail(ListNode node, int steps) {
-        if (steps == 1) return node;
-        return findNewTail(node.next, steps - 1);
+
+    public int count(ListNode head) {
+
+        if (head == null) {
+            return 0;
+        }
+
+        return 1 + count(head.next);
     }
 }
