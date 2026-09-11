@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0628-maximum-product-of-three-numbers](https://github.com/Emkay2309/Leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
 | [0877-stone-game](https://github.com/Emkay2309/Leetcode/tree/main/0877-stone-game/) | Medium |
+| [0905-sort-array-by-parity](https://github.com/Emkay2309/Leetcode/tree/main/0905-sort-array-by-parity/) | Easy |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/Emkay2309/Leetcode/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
@@ -129,6 +130,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0061-rotate-list](https://github.com/Emkay2309/Leetcode/tree/main/0061-rotate-list/) | Medium |
 | [0345-reverse-vowels-of-a-string](https://github.com/Emkay2309/Leetcode/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
+| [0905-sort-array-by-parity](https://github.com/Emkay2309/Leetcode/tree/main/0905-sort-array-by-parity/) | Easy |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/Emkay2309/Leetcode/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/Emkay2309/Leetcode/tree/main/2095-delete-the-middle-node-of-a-linked-list/) | Medium |
 | [2161-partition-array-according-to-given-pivot](https://github.com/Emkay2309/Leetcode/tree/main/2161-partition-array-according-to-given-pivot/) | Medium |
@@ -176,6 +178,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0049-group-anagrams](https://github.com/Emkay2309/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [0628-maximum-product-of-three-numbers](https://github.com/Emkay2309/Leetcode/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
+| [0905-sort-array-by-parity](https://github.com/Emkay2309/Leetcode/tree/main/0905-sort-array-by-parity/) | Easy |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/Emkay2309/Leetcode/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/Emkay2309/Leetcode/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
