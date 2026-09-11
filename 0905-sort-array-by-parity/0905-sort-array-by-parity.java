@@ -1,17 +1,15 @@
 class Solution {
     public int[] sortArrayByParity(int[] nums) {
-        int n = nums.length ,  even = 0 , odd = 0;
+        int evenIndex = 0;
+        int currentIndex = 0;
 
-        while(odd < n) {
-            int curr = nums[odd];
-
-            if(curr%2==0) {
-                swap(nums , odd , even);
-                even++;
-            } 
-            odd++;
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                swap(nums, currentIndex, evenIndex);
+                evenIndex++;
+            }
+            currentIndex++;
         }
-
         return nums;
     }
 
