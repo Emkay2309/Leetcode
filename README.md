@@ -37,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2540-minimum-common-value](https://github.com/Emkay2309/Leetcode/tree/main/2540-minimum-common-value/) | Easy |
 | [2553-separate-the-digits-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/2553-separate-the-digits-in-an-array/) | Easy |
 | [2574-left-and-right-sum-differences](https://github.com/Emkay2309/Leetcode/tree/main/2574-left-and-right-sum-differences/) | Easy |
+| [2594-minimum-time-to-repair-cars](https://github.com/Emkay2309/Leetcode/tree/main/2594-minimum-time-to-repair-cars/) | Medium |
 | [2657-find-the-prefix-common-array-of-two-arrays](https://github.com/Emkay2309/Leetcode/tree/main/2657-find-the-prefix-common-array-of-two-arrays/) | Medium |
 | [2770-maximum-number-of-jumps-to-reach-the-last-index](https://github.com/Emkay2309/Leetcode/tree/main/2770-maximum-number-of-jumps-to-reach-the-last-index/) | Medium |
 | [2784-check-if-array-is-good](https://github.com/Emkay2309/Leetcode/tree/main/2784-check-if-array-is-good/) | Easy |
@@ -212,6 +213,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/Emkay2309/Leetcode/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [2540-minimum-common-value](https://github.com/Emkay2309/Leetcode/tree/main/2540-minimum-common-value/) | Easy |
+| [2594-minimum-time-to-repair-cars](https://github.com/Emkay2309/Leetcode/tree/main/2594-minimum-time-to-repair-cars/) | Medium |
 | [2812-find-the-safest-path-in-a-grid](https://github.com/Emkay2309/Leetcode/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
 | [3633-earliest-finish-time-for-land-and-water-rides-i](https://github.com/Emkay2309/Leetcode/tree/main/3633-earliest-finish-time-for-land-and-water-rides-i/) | Easy |
 | [3635-earliest-finish-time-for-land-and-water-rides-ii](https://github.com/Emkay2309/Leetcode/tree/main/3635-earliest-finish-time-for-land-and-water-rides-ii/) | Medium |
