@@ -27,9 +27,9 @@ class Solution {
 
         int left = dfs(root.left);
         int right = dfs(root.right);
-
-        ans += Math.abs(left) + Math.abs(right);
         
+        ans += Math.abs(left) + Math.abs(right);
+
         return (left+right+root.val)-1;
     }
 }
