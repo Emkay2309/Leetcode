@@ -230,6 +230,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 | [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
+| [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
 ## Depth-First Search
@@ -239,6 +240,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0501-find-mode-in-binary-search-tree](https://github.com/Emkay2309/Leetcode/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
+| [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
@@ -271,6 +273,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0501-find-mode-in-binary-search-tree](https://github.com/Emkay2309/Leetcode/tree/main/0501-find-mode-in-binary-search-tree/) | Easy |
 | [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
+| [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
 ## Union-Find
@@ -395,4 +398,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1401-circle-and-rectangle-overlapping](https://github.com/Emkay2309/Leetcode/tree/main/1401-circle-and-rectangle-overlapping/) | Medium |
+## DP on Trees
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 <!---LeetCode Topics End-->
