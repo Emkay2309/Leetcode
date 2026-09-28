@@ -235,6 +235,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
 | [0968-binary-tree-cameras](https://github.com/Emkay2309/Leetcode/tree/main/0968-binary-tree-cameras/) | Hard |
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
+| [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
@@ -249,6 +250,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
 | [0968-binary-tree-cameras](https://github.com/Emkay2309/Leetcode/tree/main/0968-binary-tree-cameras/) | Hard |
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
+| [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
@@ -264,6 +266,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
+| [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 | [2101-detonate-the-maximum-bombs](https://github.com/Emkay2309/Leetcode/tree/main/2101-detonate-the-maximum-bombs/) | Medium |
@@ -288,6 +291,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
 | [0968-binary-tree-cameras](https://github.com/Emkay2309/Leetcode/tree/main/0968-binary-tree-cameras/) | Hard |
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
+| [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
