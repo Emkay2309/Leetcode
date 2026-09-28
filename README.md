@@ -236,6 +236,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
+| [3997-count-dominant-nodes-in-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/3997-count-dominant-nodes-in-a-binary-tree/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -251,6 +252,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2492-minimum-score-of-a-path-between-two-cities](https://github.com/Emkay2309/Leetcode/tree/main/2492-minimum-score-of-a-path-between-two-cities/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/Emkay2309/Leetcode/tree/main/2685-count-the-number-of-complete-components/) | Medium |
 | [3310-remove-methods-from-project](https://github.com/Emkay2309/Leetcode/tree/main/3310-remove-methods-from-project/) | Medium |
+| [3997-count-dominant-nodes-in-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/3997-count-dominant-nodes-in-a-binary-tree/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -282,6 +284,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
+| [3997-count-dominant-nodes-in-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/3997-count-dominant-nodes-in-a-binary-tree/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
