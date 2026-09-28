@@ -246,6 +246,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
+| [2331-evaluate-boolean-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/2331-evaluate-boolean-binary-tree/) | Easy |
 | [2641-cousins-in-binary-tree-ii](https://github.com/Emkay2309/Leetcode/tree/main/2641-cousins-in-binary-tree-ii/) | Medium |
 | [3997-count-dominant-nodes-in-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/3997-count-dominant-nodes-in-a-binary-tree/) | Medium |
 ## Depth-First Search
@@ -266,6 +267,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 | [2101-detonate-the-maximum-bombs](https://github.com/Emkay2309/Leetcode/tree/main/2101-detonate-the-maximum-bombs/) | Medium |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
+| [2331-evaluate-boolean-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/2331-evaluate-boolean-binary-tree/) | Easy |
 | [2492-minimum-score-of-a-path-between-two-cities](https://github.com/Emkay2309/Leetcode/tree/main/2492-minimum-score-of-a-path-between-two-cities/) | Medium |
 | [2641-cousins-in-binary-tree-ii](https://github.com/Emkay2309/Leetcode/tree/main/2641-cousins-in-binary-tree-ii/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/Emkay2309/Leetcode/tree/main/2685-count-the-number-of-complete-components/) | Medium |
@@ -313,6 +315,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
+| [2331-evaluate-boolean-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/2331-evaluate-boolean-binary-tree/) | Easy |
 | [2641-cousins-in-binary-tree-ii](https://github.com/Emkay2309/Leetcode/tree/main/2641-cousins-in-binary-tree-ii/) | Medium |
 | [3997-count-dominant-nodes-in-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/3997-count-dominant-nodes-in-a-binary-tree/) | Medium |
 ## Union-Find
