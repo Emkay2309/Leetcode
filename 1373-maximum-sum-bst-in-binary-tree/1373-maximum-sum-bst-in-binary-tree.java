@@ -18,10 +18,7 @@ class Solution {
         int[] right = dfs(root.right);
 
         // Check if current subtree is BST
-        if (left[0] == 1 &&
-            right[0] == 1 &&
-            root.val > left[2] &&
-            root.val < right[1]) {
+        if (left[0] == 1 && right[0] == 1 && root.val > left[2] && root.val < right[1]) {
 
             int sum = root.val + left[3] + right[3];
 
