@@ -453,4 +453,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
+## Cartesian Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0654-maximum-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0654-maximum-binary-tree/) | Medium |
 <!---LeetCode Topics End-->
