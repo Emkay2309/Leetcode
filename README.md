@@ -238,6 +238,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [0998-maximum-binary-tree-ii](https://github.com/Emkay2309/Leetcode/tree/main/0998-maximum-binary-tree-ii/) | Medium |
+| [1022-sum-of-root-to-leaf-binary-numbers](https://github.com/Emkay2309/Leetcode/tree/main/1022-sum-of-root-to-leaf-binary-numbers/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
@@ -255,6 +256,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0968-binary-tree-cameras](https://github.com/Emkay2309/Leetcode/tree/main/0968-binary-tree-cameras/) | Hard |
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
+| [1022-sum-of-root-to-leaf-binary-numbers](https://github.com/Emkay2309/Leetcode/tree/main/1022-sum-of-root-to-leaf-binary-numbers/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
@@ -300,6 +302,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [0998-maximum-binary-tree-ii](https://github.com/Emkay2309/Leetcode/tree/main/0998-maximum-binary-tree-ii/) | Medium |
+| [1022-sum-of-root-to-leaf-binary-numbers](https://github.com/Emkay2309/Leetcode/tree/main/1022-sum-of-root-to-leaf-binary-numbers/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
 | [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
