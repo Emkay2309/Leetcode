@@ -91,6 +91,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0049-group-anagrams](https://github.com/Emkay2309/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Emkay2309/Leetcode/tree/main/0532-k-diff-pairs-in-an-array/) | Medium |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
 | [1674-minimum-moves-to-make-array-complementary](https://github.com/Emkay2309/Leetcode/tree/main/1674-minimum-moves-to-make-array-complementary/) | Medium |
 | [2540-minimum-common-value](https://github.com/Emkay2309/Leetcode/tree/main/2540-minimum-common-value/) | Easy |
@@ -237,6 +238,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
@@ -253,6 +255,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
@@ -269,6 +272,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1345-jump-game-iv](https://github.com/Emkay2309/Leetcode/tree/main/1345-jump-game-iv/) | Hard |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 | [2101-detonate-the-maximum-bombs](https://github.com/Emkay2309/Leetcode/tree/main/2101-detonate-the-maximum-bombs/) | Medium |
@@ -295,6 +299,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
@@ -432,9 +437,18 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0968-binary-tree-cameras](https://github.com/Emkay2309/Leetcode/tree/main/0968-binary-tree-cameras/) | Hard |
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 ## Bracket Sequences
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/Emkay2309/Leetcode/tree/main/1614-maximum-nesting-depth-of-the-parentheses/) | Easy |
+## Binary Lifting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
+## Lowest Common Ancestor
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1123-lowest-common-ancestor-of-deepest-leaves](https://github.com/Emkay2309/Leetcode/tree/main/1123-lowest-common-ancestor-of-deepest-leaves/) | Medium |
 <!---LeetCode Topics End-->
