@@ -237,6 +237,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
+| [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
@@ -252,6 +253,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
+| [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [1559-detect-cycles-in-2d-grid](https://github.com/Emkay2309/Leetcode/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
 | [2101-detonate-the-maximum-bombs](https://github.com/Emkay2309/Leetcode/tree/main/2101-detonate-the-maximum-bombs/) | Medium |
@@ -293,6 +295,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0979-distribute-coins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [0993-cousins-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0993-cousins-in-binary-tree/) | Easy |
 | [1080-insufficient-nodes-in-root-to-leaf-paths](https://github.com/Emkay2309/Leetcode/tree/main/1080-insufficient-nodes-in-root-to-leaf-paths/) | Medium |
+| [1145-binary-tree-coloring-game](https://github.com/Emkay2309/Leetcode/tree/main/1145-binary-tree-coloring-game/) | Medium |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/1373-maximum-sum-bst-in-binary-tree/) | Hard |
 | [2236-root-equals-sum-of-children](https://github.com/Emkay2309/Leetcode/tree/main/2236-root-equals-sum-of-children/) | Easy |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/Emkay2309/Leetcode/tree/main/2265-count-nodes-equal-to-average-of-subtree/) | Medium |
