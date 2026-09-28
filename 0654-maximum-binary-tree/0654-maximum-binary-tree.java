@@ -35,8 +35,7 @@ class Solution {
         int max_index = l;
 
         for (int i = l; i < r; i++) {
-            if (nums[max_index] < nums[i])
-                max_index = i;
+            if (nums[max_index] < nums[i])  max_index = i;
         }
 
         return max_index;
