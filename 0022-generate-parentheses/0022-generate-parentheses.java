@@ -1,44 +1,69 @@
 class Solution {
-    List<String> ans = new ArrayList<>();
     public List<String> generateParenthesis(int n) {
-        
-        solve(new StringBuilder() , n);
+        List<String> ans = new ArrayList<>();
+        fun("" , 0 , 0 , n , ans);
         return ans;
     }
-
-    public void solve(StringBuilder curr , int n) {
+    public void fun(String curr,int open, int close, int n, List<String> ans) {
         if(curr.length() == 2*n) {
-            if(isValid(curr , n)) {
-                ans.add(curr.toString());
-            }
+            ans.add(curr);
             return;
         }
 
-        curr.append('(');
-        solve(curr , n);
-        curr.deleteCharAt(curr.length()-1);
-
-        curr.append(')');
-        solve(curr , n);
-        curr.deleteCharAt(curr.length()-1);
-    }
-
-    public boolean isValid(StringBuilder str , int n) {
-        int len = str.length();
-        int open = 0, close = 0;
-
-        for(char ch : str.toString().toCharArray()) {
-            if(ch == '(') {
-                open++;
-            }
-            else {
-                close++;
-            }
-            if(close > open) {
-                return false;
-            }
+        if(open < n) {
+            fun(curr+"(" , open+1 , close , n , ans);
         }
-
-        return open == close;
+        if(close < open) {
+            fun(curr+")" , open , close+1 , n , ans);
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Solution {
+//     public List<String> generateParenthesis(int n) {
+//         List<String> ans = new ArrayList<>();
+//         fun("" , 0 , 0 , n  , ans);
+//         return ans;
+//     }
+    
+//     public void fun(String curr , int openBrac , int closeBrac , int n , List<String> ans) {
+//         if(curr.length() == n*2) {
+//             ans.add(curr);
+//             return;
+//         }
+
+//         if(openBrac < n) {
+//             fun(curr+"(" , openBrac+1 , closeBrac , n , ans);
+//         }
+//         if(closeBrac < openBrac) {
+//             fun(curr+")", openBrac , closeBrac+1 , n , ans);
+//         }
+
+//     }
+// }
