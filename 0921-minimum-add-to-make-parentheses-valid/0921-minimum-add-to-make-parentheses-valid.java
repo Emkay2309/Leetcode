@@ -1,17 +1,18 @@
 class Solution {
     public int minAddToMakeValid(String s) {
-        int openCount = 0;    
-        int extraClose = 0;
-
-        for (char curr : s.toCharArray()) {
-            if (curr == '(') {
-                openCount++;
-            } else if (openCount > 0) {
-                openCount--;
+        int balance = 0;
+        int ans = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                balance++;
             } else {
-                extraClose++;
+                if (balance > 0)
+                    balance--;
+                else
+                    ans++;
             }
         }
-        return openCount + extraClose;
+
+        return ans + balance;
     }
 }
