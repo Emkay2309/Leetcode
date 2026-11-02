@@ -118,6 +118,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0043-multiply-strings](https://github.com/Emkay2309/Leetcode/tree/main/0043-multiply-strings/) | Medium |
 | [0049-group-anagrams](https://github.com/Emkay2309/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0076-minimum-window-substring](https://github.com/Emkay2309/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
+| [0301-remove-invalid-parentheses](https://github.com/Emkay2309/Leetcode/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0331-verify-preorder-serialization-of-a-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0331-verify-preorder-serialization-of-a-binary-tree/) | Medium |
 | [0345-reverse-vowels-of-a-string](https://github.com/Emkay2309/Leetcode/tree/main/0345-reverse-vowels-of-a-string/) | Easy |
 | [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
@@ -283,6 +284,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0301-remove-invalid-parentheses](https://github.com/Emkay2309/Leetcode/tree/main/0301-remove-invalid-parentheses/) | Hard |
 | [0449-serialize-and-deserialize-bst](https://github.com/Emkay2309/Leetcode/tree/main/0449-serialize-and-deserialize-bst/) | Medium |
 | [0559-maximum-depth-of-n-ary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0559-maximum-depth-of-n-ary-tree/) | Easy |
 | [0655-print-binary-tree](https://github.com/Emkay2309/Leetcode/tree/main/0655-print-binary-tree/) | Medium |
@@ -488,4 +490,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/Emkay2309/Leetcode/tree/main/0022-generate-parentheses/) | Medium |
+| [0301-remove-invalid-parentheses](https://github.com/Emkay2309/Leetcode/tree/main/0301-remove-invalid-parentheses/) | Hard |
 <!---LeetCode Topics End-->
