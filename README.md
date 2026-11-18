@@ -130,6 +130,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/Emkay2309/Leetcode/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
 | [1871-jump-game-vii](https://github.com/Emkay2309/Leetcode/tree/main/1871-jump-game-vii/) | Medium |
 | [2243-calculate-digit-sum-of-a-string](https://github.com/Emkay2309/Leetcode/tree/main/2243-calculate-digit-sum-of-a-string/) | Easy |
+| [2914-minimum-number-of-changes-to-make-binary-string-beautiful](https://github.com/Emkay2309/Leetcode/tree/main/2914-minimum-number-of-changes-to-make-binary-string-beautiful/) | Medium |
 | [3090-maximum-length-substring-with-two-occurrences](https://github.com/Emkay2309/Leetcode/tree/main/3090-maximum-length-substring-with-two-occurrences/) | Easy |
 | [3121-count-the-number-of-special-characters-ii](https://github.com/Emkay2309/Leetcode/tree/main/3121-count-the-number-of-special-characters-ii/) | Medium |
 | [3498-reverse-degree-of-a-string](https://github.com/Emkay2309/Leetcode/tree/main/3498-reverse-degree-of-a-string/) | Easy |
